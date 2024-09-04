@@ -36,3 +36,51 @@ export const NavigationItem = styled.div`
     color: #232fa9;
   }
 `;
+
+export const UserItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  p {
+    font-size: 17px;
+  }
+`;
+
+export const UserImage = styled.div`
+  width: 11rem;
+  height: 11rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #232fa9;
+  margin-bottom: 1.5rem;
+
+  img {
+    object-fit: cover;
+  }
+`;
+
+export const IconList = styled.div`
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    cursor: pointer;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+`;
