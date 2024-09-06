@@ -4,10 +4,18 @@ import './App.css';
 import Header from './components/layout/header/Header';
 
 const App = () => {
+  const headerNavigationData: string[] = [
+    'ABOUT ME',
+    'SKILLS',
+    'POJECT',
+    'ACTIVITY',
+    'CONTACT',
+  ];
+
   return (
     <>
       <div className="wrap">
-        <Header />
+        <Header navigationData={headerNavigationData} />
       </div>
     </>
   );

@@ -7,7 +7,10 @@ export const HeaderStyle = styled.header`
   height: 100%;
   width: 18%;
   background: #f4f5fc;
-  padding: 2.4rem;
+  padding: 7rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 `;
 
 export const LogoItem = styled.div`
@@ -24,7 +27,7 @@ export const LogoItem = styled.div`
 `;
 
 export const NavigationItem = styled.div`
-  font-size: 20px;
+  font-size: 24px;
   padding: 16px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   transition: 0.4s;
