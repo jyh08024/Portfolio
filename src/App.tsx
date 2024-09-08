@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/layout/header/Header';
+import About from './components/About/About';
 
 const App = () => {
   const headerNavigationData: string[] = [
     'ABOUT ME',
     'SKILLS',
-    'POJECT',
+    'PROJECT',
     'ACTIVITY',
     'CONTACT',
   ];
@@ -16,6 +16,7 @@ const App = () => {
     <>
       <div className="wrap">
         <Header navigationData={headerNavigationData} />
+		<About />
       </div>
     </>
   );

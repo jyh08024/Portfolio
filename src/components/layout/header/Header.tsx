@@ -35,7 +35,7 @@ const Header = ({ navigationData }: propTypes) => {
 
       <UserItem>
         <UserImage>
-          <img src="" alt="" />
+          <img src="/assets/image/profile2.png" alt="profileImage" />
         </UserImage>
         <div>
           <p>
@@ -47,9 +47,11 @@ const Header = ({ navigationData }: propTypes) => {
 
       <IconList>
         <a href="https://github.com/jyh08024" target="_blank" rel="noreferrer">
+					<span>Github</span>
           <FaGithub />
         </a>
         <a href="mailto:jyh08024@gmail.com" target="_blank" rel="noreferrer">
+					<span>Email</span>
           <MdEmail />
         </a>
         <a
@@ -57,6 +59,7 @@ const Header = ({ navigationData }: propTypes) => {
           target="_blank"
           rel="noreferrer"
         >
+					<span>Blog</span>
           <SiVelog />
         </a>
         <a
@@ -64,6 +67,7 @@ const Header = ({ navigationData }: propTypes) => {
           target="_blank"
           rel="noreferrer"
         >
+					<span>Resume</span>
           {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
           <IoDocumentTextSharp />
         </a>

@@ -82,4 +82,12 @@ export const GlobalStyled = createGlobalStyle`
     font-family: "Pretendard", "Microsoft Phagspa";
     letter-spacing: -1px;
   }
+
+  .wrap {
+	width: 100%;
+	max-width: 100vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+  }
 `;

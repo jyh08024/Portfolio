@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { defaultTheme } from '../../../theme';
 
 export const HeaderStyle = styled.header`
-  position: fixed;
-  left: 0;
+  /*position: fixed;*/
+  /*left: 0;*/
   height: 100%;
   width: 18%;
   background: #f4f5fc;
-  padding: 7rem 2.4rem;
+  padding: 2.6rem 2.4rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -61,6 +61,8 @@ export const UserImage = styled.div`
   margin-bottom: 1.5rem;
 
   img {
+	width: 100%;
+	height: 100%;
     object-fit: cover;
   }
 `;
@@ -74,6 +76,16 @@ export const IconList = styled.div`
 
   a {
     cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	span {
+		font-size: 14px;
+		opacity: .7;
+		margin-bottom: .4rem;
+	}
   }
 
   svg {
