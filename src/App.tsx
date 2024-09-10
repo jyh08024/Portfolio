@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/layout/header/Header';
-import About from './components/About/About';
+import CodeBlock from './components/CodeBlock/CodeBlock';
 
 const App = () => {
   const headerNavigationData: string[] = [
@@ -16,7 +16,7 @@ const App = () => {
     <>
       <div className="wrap">
         <Header navigationData={headerNavigationData} />
-		<About />
+        <CodeBlock />
       </div>
     </>
   );

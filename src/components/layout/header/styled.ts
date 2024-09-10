@@ -4,13 +4,15 @@ import { defaultTheme } from '../../../theme';
 export const HeaderStyle = styled.header`
   /*position: fixed;*/
   /*left: 0;*/
-  height: 100%;
+  height: 100vh;
   width: 18%;
   background: #f4f5fc;
   padding: 2.6rem 2.4rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: #434041;
+  color: #f4f5fc;
 `;
 
 export const LogoItem = styled.div`
@@ -29,14 +31,14 @@ export const LogoItem = styled.div`
 export const NavigationItem = styled.div`
   font-size: 24px;
   padding: 16px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   transition: 0.4s;
   cursor: pointer;
 
   &:hover {
     font-weight: bold;
-    border-bottom: 2px solid #232fa9;
-    color: #232fa9;
+    border-bottom: 2px solid #febf00;
+    color: #febf00;
   }
 `;
 
@@ -61,8 +63,8 @@ export const UserImage = styled.div`
   margin-bottom: 1.5rem;
 
   img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 `;
@@ -76,16 +78,16 @@ export const IconList = styled.div`
 
   a {
     cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-	span {
-		font-size: 14px;
-		opacity: .7;
-		margin-bottom: .4rem;
-	}
+    span {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 0.4rem;
+    }
   }
 
   svg {

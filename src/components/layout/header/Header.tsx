@@ -39,19 +39,19 @@ const Header = ({ navigationData }: propTypes) => {
         </UserImage>
         <div>
           <p>
-            제가짠 코드를 처음 보는 사람이어도 알아보기 쉬운 코드를 작성하기
-            위해 노력합니다
+            제가 짠 코드를 처음 보는 사람이어도 알아보기 쉽게 작성하도록
+            노력합니다
           </p>
         </div>
       </UserItem>
 
       <IconList>
         <a href="https://github.com/jyh08024" target="_blank" rel="noreferrer">
-					<span>Github</span>
+          <span>Github</span>
           <FaGithub />
         </a>
         <a href="mailto:jyh08024@gmail.com" target="_blank" rel="noreferrer">
-					<span>Email</span>
+          <span>Email</span>
           <MdEmail />
         </a>
         <a
@@ -59,7 +59,7 @@ const Header = ({ navigationData }: propTypes) => {
           target="_blank"
           rel="noreferrer"
         >
-					<span>Blog</span>
+          <span>Blog</span>
           <SiVelog />
         </a>
         <a
@@ -67,7 +67,7 @@ const Header = ({ navigationData }: propTypes) => {
           target="_blank"
           rel="noreferrer"
         >
-					<span>Resume</span>
+          <span>Resume</span>
           {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
           <IoDocumentTextSharp />
         </a>
