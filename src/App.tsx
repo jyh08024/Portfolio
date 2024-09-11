@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/layout/header/Header';
 import CodeBlock from './components/CodeBlock/CodeBlock';
@@ -11,6 +11,9 @@ const App = () => {
     'ACTIVITY',
     'CONTACT',
   ];
+
+  const [openTabList, setOpenTab] = useState<string[]>([]);
+  const [nowTap, setNowTab] = useState<string>('');
 
   return (
     <>

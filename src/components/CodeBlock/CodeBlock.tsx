@@ -6,8 +6,10 @@ import {
   FileBar,
   FileItem,
   EditorContainer,
+  EditorLines,
 } from './styled';
 import { FaReact } from 'react-icons/fa';
+import { MdNotes } from "react-icons/md";
 
 const CodeBlock = () => {
   return (
@@ -21,14 +23,28 @@ const CodeBlock = () => {
 
         <FileBar>
           <div className="file_list">
+			<FileItem data-nowTab={true}>
+              <MdNotes />
+              <p>Welcome.md</p>
+            </FileItem>
             <FileItem>
-              <FaReact color="#61dbfb" />
-              <p>About Me</p>
+              <FaReact color="#61dbfb" data-nowTab={false} />
+              <p>About.Me</p>
             </FileItem>
           </div>
         </FileBar>
 
-        <EditorContainer></EditorContainer>
+        <EditorContainer>
+			<EditorLines>
+				{
+					new Array(100).fill('').map((_: string, index: number) => 
+						<div className="line_item">
+					{index + 1}
+				</div>
+				)
+				}
+			</EditorLines>
+		</EditorContainer>
       </Bluck>
     </CodeBluckStyle>
   );
