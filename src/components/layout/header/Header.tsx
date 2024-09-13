@@ -38,10 +38,7 @@ const Header = ({ navigationData }: propTypes) => {
           <img src="/assets/image/profile2.png" alt="profileImage" />
         </UserImage>
         <div>
-          <p>
-            제가 짠 코드를 처음 보는 사람이어도 알아보기 쉽게 작성하도록
-            노력합니다
-          </p>
+          <p>초보자도 보기 쉬운 간단한 코드를 지향합니다</p>
         </div>
       </UserItem>
 
