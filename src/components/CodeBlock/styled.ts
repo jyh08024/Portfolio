@@ -23,12 +23,13 @@ export const Bluck = styled.div`
 
 export const BlockHeader = styled.div`
   width: 100%;
+  height: 70px;
   padding: 1.6rem;
   background: #434041;
   /* border-radius: 8px; */
   display: flex;
   align-items: center;
-  border-left: 1px solid #f4f5fc20;
+  /*border-left: 1px solid #f4f5fc20;*/
   border-right: 1px solid #f4f5fc20;
 
   div {
@@ -81,7 +82,7 @@ export const FileItem = styled.div<MyDivProps>`
 `;
 
 export const EditorContainer = styled.div`
-	height: 100%;
+	height: calc(100% - 70px - 52px);
 	overflow: auto;
 `;
 

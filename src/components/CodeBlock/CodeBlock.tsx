@@ -10,7 +10,7 @@ import {
 } from './styled';
 import { FaReact } from 'react-icons/fa';
 import { MdNotes } from 'react-icons/md';
-import { IconType } from 'react-icons';
+import { WelcomeComponents } from '../welcome/Welcome';
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -21,10 +21,18 @@ interface FileIcon {
   [key: string]: ReactElement;
 }
 
+interface viewFileType {
+	[key: string]: ReactElement;
+}
+
 const fileIcon: FileIcon = {
   'WELCOME.md': <MdNotes />,
   'ABOUT.ME': <FaReact color="#61dbfb" />,
 };
+
+const viewFile: viewFileType = {
+	'WELCOME.md': <WelcomeComponents />
+}
 
 const CodeBlock = ({ openTabList, nowTab }: CodeBlcokProps) => {
   return (
@@ -52,11 +60,16 @@ const CodeBlock = ({ openTabList, nowTab }: CodeBlcokProps) => {
         </FileBar>
 
         <EditorContainer>
-          <EditorLines>
-            {new Array(100).fill('').map((_: string, index: number) => (
-              <div className="line_item">{index + 1}</div>
-            ))}
+		{
+			nowTab !== 'WELCOME.md' && 
+				<EditorLines>
+					{new Array(100).fill('').map((_: string, index: number) => (
+					<div className="line_item">{index + 1}</div>
+				))}
           </EditorLines>
+		}
+
+		{viewFile?.[nowTab]}		
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>

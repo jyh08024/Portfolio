@@ -5,7 +5,6 @@ import CodeBlock from './components/CodeBlock/CodeBlock';
 
 const App = () => {
   const headerNavigationData: string[] = [
-    'WELCOME.md',
     'ABOUT ME',
     'SKILLS',
     'PROJECT',

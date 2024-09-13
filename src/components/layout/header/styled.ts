@@ -13,11 +13,12 @@ export const HeaderStyle = styled.header`
   flex-direction: column;
   background-color: #434041;
   color: #f4f5fc;
+  border-right: 1px solid #f4f5fc20;
 `;
 
 export const LogoItem = styled.div`
   h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   p {
@@ -25,11 +26,10 @@ export const LogoItem = styled.div`
     margin: 10px 0;
   }
 
-  margin-bottom: 4rem;
 `;
 
 export const NavigationItem = styled.div`
-  font-size: 24px;
+  font-size: 22px;
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   transition: 0.4s;
@@ -47,7 +47,6 @@ export const UserItem = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3rem;
 
   p {
     font-size: 17px;
@@ -70,7 +69,6 @@ export const UserImage = styled.div`
 `;
 
 export const IconList = styled.div`
-  margin-top: 1.5rem;
   width: 100%;
   display: flex;
   align-items: center;

@@ -1,6 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
+	// 스크롤바 전체(넓이 지정)
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	// 스크롤바 표시
+	::-webkit-scrollbar-thumb {
+		background: #febf00;
+		border-radius: 10px;
+	}
+	// 스크롤바 배경
+	::-webkit-scrollbar-track {
+		background: #f4f5fc;
+	}
+
   @font-face {
     font-family: "BlackHanSans";
     src: url('/assets/fonts/BlackHanSans-Regular.ttf');
