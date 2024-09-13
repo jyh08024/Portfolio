@@ -5,6 +5,7 @@ import CodeBlock from './components/CodeBlock/CodeBlock';
 
 const App = () => {
   const headerNavigationData: string[] = [
+    'WELCOME.md',
     'ABOUT ME',
     'SKILLS',
     'PROJECT',
@@ -12,14 +13,14 @@ const App = () => {
     'CONTACT',
   ];
 
-  const [openTabList, setOpenTab] = useState<string[]>([]);
-  const [nowTap, setNowTab] = useState<string>('');
+  const [openTabList, setOpenTab] = useState<string[]>(['WELCOME.md']);
+  const [nowTab, setNowTab] = useState<string>('WELCOME.md');
 
   return (
     <>
       <div className="wrap">
         <Header navigationData={headerNavigationData} />
-        <CodeBlock />
+        <CodeBlock openTabList={openTabList} nowTab={nowTab} />
       </div>
     </>
   );

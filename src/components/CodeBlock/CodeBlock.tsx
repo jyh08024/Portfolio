@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {
   CodeBluckStyle,
   Bluck,
@@ -9,9 +9,24 @@ import {
   EditorLines,
 } from './styled';
 import { FaReact } from 'react-icons/fa';
-import { MdNotes } from "react-icons/md";
+import { MdNotes } from 'react-icons/md';
+import { IconType } from 'react-icons';
 
-const CodeBlock = () => {
+interface CodeBlcokProps {
+  openTabList: string[];
+  nowTab: string;
+}
+
+interface FileIcon {
+  [key: string]: ReactElement;
+}
+
+const fileIcon: FileIcon = {
+  'WELCOME.md': <MdNotes />,
+  'ABOUT.ME': <FaReact color="#61dbfb" />,
+};
+
+const CodeBlock = ({ openTabList, nowTab }: CodeBlcokProps) => {
   return (
     <CodeBluckStyle>
       <Bluck>
@@ -23,10 +38,12 @@ const CodeBlock = () => {
 
         <FileBar>
           <div className="file_list">
-			<FileItem data-nowTab={true}>
-              <MdNotes />
-              <p>Welcome.md</p>
-            </FileItem>
+            {openTabList.map((tabName: string) => (
+              <FileItem data-nowTab={tabName === nowTab}>
+                {fileIcon[tabName]}
+                <p>{tabName}</p>
+              </FileItem>
+            ))}
             <FileItem>
               <FaReact color="#61dbfb" data-nowTab={false} />
               <p>About.Me</p>
@@ -35,16 +52,12 @@ const CodeBlock = () => {
         </FileBar>
 
         <EditorContainer>
-			<EditorLines>
-				{
-					new Array(100).fill('').map((_: string, index: number) => 
-						<div className="line_item">
-					{index + 1}
-				</div>
-				)
-				}
-			</EditorLines>
-		</EditorContainer>
+          <EditorLines>
+            {new Array(100).fill('').map((_: string, index: number) => (
+              <div className="line_item">{index + 1}</div>
+            ))}
+          </EditorLines>
+        </EditorContainer>
       </Bluck>
     </CodeBluckStyle>
   );
