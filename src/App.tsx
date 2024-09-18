@@ -3,23 +3,35 @@ import './App.css';
 import Header from './components/layout/header/Header';
 import CodeBlock from './components/CodeBlock/CodeBlock';
 
-const App = () => {
-  const headerNavigationData: string[] = [
+const copyrightName = '장영훈';
+
+const headerNavigationData: string[] = [
     'ABOUT ME',
     'SKILLS',
     'PROJECT',
     'ACTIVITY',
     'CONTACT',
   ];
+  const titleAnimationData: string[] = [
+	"React, TypeScript",
+	"Dart, Flutter",
+	"PHP, MySQL",
+	"Node.js, Nest.js",
+  ];
 
+  const normalTitle = '저는 프론트엔드 개발자 장영훈입니다.';
+
+  const titleAnimation = true;
+
+const App = () => {
   const [openTabList, setOpenTab] = useState<string[]>(['WELCOME.md']);
   const [nowTab, setNowTab] = useState<string>('WELCOME.md');
 
   return (
     <>
       <div className="wrap">
-        <Header navigationData={headerNavigationData} />
-        <CodeBlock openTabList={openTabList} nowTab={nowTab} />
+        <Header navigationData={headerNavigationData} userName={copyrightName} />
+        <CodeBlock openTabList={openTabList} nowTab={nowTab} titleAnimation={titleAnimation} titleAnimationData={titleAnimationData} normalTitle={normalTitle} />
       </div>
     </>
   );

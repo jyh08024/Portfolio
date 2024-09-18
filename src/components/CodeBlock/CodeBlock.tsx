@@ -15,14 +15,13 @@ import { WelcomeComponents } from '../welcome/Welcome';
 interface CodeBlcokProps {
   openTabList: string[];
   nowTab: string;
+  titleAnimation: boolean;
+  titleAnimationData: string[];
+  normalTitle: string;
 }
 
 interface FileIcon {
   [key: string]: ReactElement;
-}
-
-interface viewFileType {
-	[key: string]: ReactElement;
 }
 
 const fileIcon: FileIcon = {
@@ -30,11 +29,7 @@ const fileIcon: FileIcon = {
   'ABOUT.ME': <FaReact color="#61dbfb" />,
 };
 
-const viewFile: viewFileType = {
-	'WELCOME.md': <WelcomeComponents />
-}
-
-const CodeBlock = ({ openTabList, nowTab }: CodeBlcokProps) => {
+const CodeBlock = ({ openTabList, nowTab, titleAnimation, titleAnimationData, normalTitle }: CodeBlcokProps) => {
   return (
     <CodeBluckStyle>
       <Bluck>
@@ -69,7 +64,9 @@ const CodeBlock = ({ openTabList, nowTab }: CodeBlcokProps) => {
           </EditorLines>
 		}
 
-		{viewFile?.[nowTab]}		
+		{
+			nowTab == 'WELCOME.md' && <WelcomeComponents titleAnimation={titleAnimation} titleAnimationData={titleAnimationData} normalTitle={normalTitle} />
+		}
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>

@@ -5,27 +5,39 @@ export const HeaderStyle = styled.header`
   /*position: fixed;*/
   /*left: 0;*/
   height: 100vh;
-  width: 18%;
+  width: 16%;
   background: #f4f5fc;
-  padding: 2.6rem 2.4rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   background-color: #434041;
   color: #f4f5fc;
   border-right: 1px solid #f4f5fc20;
 `;
 
+export const HeaderContent = styled.div`
+  padding: 2.6rem 2.4rem;
+  height: calc(100% - 30%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+export const LogoBackground = styled.div`
+	background: #febf00;
+	width: 100%;
+	height: 90px;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+`;
+
 export const LogoItem = styled.div`
-  h2 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	padding-top: 2rem;
 `;
 
 export const NavigationItem = styled.div`
@@ -48,18 +60,21 @@ export const UserItem = styled.div`
   justify-content: center;
   flex-direction: column;
 
+  h3 {
+	margin: 1.2rem 0 .3rem 0;
+  }
+
   p {
-    font-size: 17px;
+    font-size: 14px;
   }
 `;
 
 export const UserImage = styled.div`
-  width: 11rem;
-  height: 11rem;
+  width: 9rem;
+  height: 9rem;
   border-radius: 999px;
   overflow: hidden;
   background: #232fa9;
-  margin-bottom: 1.5rem;
 
   img {
     width: 100%;
@@ -73,6 +88,7 @@ export const IconList = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1.4rem;
 
   a {
     cursor: pointer;
@@ -98,4 +114,11 @@ export const IconList = styled.div`
     width: 40px;
     height: 40px;
   }
+`;
+
+export const FooterStyle = styled.div`
+	p {
+		margin: 0.2rem 0;
+		font-size: 14px;
+	}
 `;

@@ -6,7 +6,7 @@ interface MyDivProps {
 
 export const CodeBluckStyle = styled.div`
   /* padding: 3rem; */
-  width: calc(100vw - 18%);
+  width: calc(100vw - 16%);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -71,6 +71,7 @@ export const FileItem = styled.div<MyDivProps>`
   justify-content: space-between;
   color: #ffffff;
   background: #333;
+  cursor: pointer;
 
   border-bottom: ${props => props['data-nowTab'] == true ? '1px solid #febf00' : ''};
 
@@ -78,6 +79,10 @@ export const FileItem = styled.div<MyDivProps>`
     margin-left: 8px;
     margin-right: 20px;
     color: #febf00;
+  }
+
+  &:hover {
+	background-color: #443;
   }
 `;
 
