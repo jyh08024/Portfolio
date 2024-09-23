@@ -13,7 +13,7 @@ export const HeaderStyle = styled.header`
 `;
 
 export const HeaderContent = styled.div`
-  padding: 2.6rem 2.4rem;
+  padding: 2.6rem 2.2rem;
   height: calc(100% - 30%);
   display: flex;
   justify-content: space-between;
