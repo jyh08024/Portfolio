@@ -24,14 +24,14 @@ const headerNavigationData: string[] = [
   const titleAnimation = true;
 
 const App = () => {
-  const [openTabList, setOpenTab] = useState<string[]>(['WELCOME.md']);
-  const [nowTab, setNowTab] = useState<string>('WELCOME.md');
+  const [openTabList, setOpenTab] = useState<string[]>(['WELCOME']);
+  const [nowTab, setNowTab] = useState<string>('WELCOME');
 
   return (
     <>
       <div className="wrap">
-        <Header navigationData={headerNavigationData} userName={copyrightName} />
-        <CodeBlock openTabList={openTabList} nowTab={nowTab} titleAnimation={titleAnimation} titleAnimationData={titleAnimationData} normalTitle={normalTitle} />
+        <Header navigationData={headerNavigationData} userName={copyrightName} setNowTab={setNowTab} setOpenTab={setOpenTab} />
+        <CodeBlock openTabList={openTabList} nowTab={nowTab} titleAnimation={titleAnimation} titleAnimationData={titleAnimationData} normalTitle={normalTitle} setNowTab={setNowTab} setOpenTab={setOpenTab} />
       </div>
     </>
   );

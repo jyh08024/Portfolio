@@ -18,9 +18,11 @@ import { IoDocumentTextSharp } from 'react-icons/io5';
 type propTypes = {
   navigationData: string[];
   userName: string;
+  setNowTab: React.Dispatch<React.SetStateAction<string>>;
+  setOpenTab: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
-const Header = ({ navigationData, userName }: propTypes) => {
+const Header = ({ navigationData, userName, setNowTab, setOpenTab }: propTypes) => {
   return (
     <HeaderStyle>
       <LogoItem>
@@ -39,9 +41,12 @@ const Header = ({ navigationData, userName }: propTypes) => {
 	  <HeaderContent>
 		<nav>
 			{navigationData?.map((navItem: string) => (
-			<NavigationItem>
+			<NavigationItem onClick={() => {
+				setNowTab(navItem);
+				setOpenTab((prevState) => prevState.includes(navItem) ? prevState : [...prevState, navItem]);
+			}}>
 				<div>
-				<p>{navItem}</p>
+					<p>{navItem}</p>
 				</div>
 			</NavigationItem>
 			))}
