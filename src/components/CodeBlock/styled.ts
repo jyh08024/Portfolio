@@ -12,6 +12,7 @@ export const CodeBluckStyle = styled.div`
   align-items: center;
   justify-content: center;
   /* background-image: linear-gradient(135deg, #f4f5fc 0%, #c3cfe2 100%); */
+  overflow: hidden;
 `;
 
 export const Bluck = styled.div`
