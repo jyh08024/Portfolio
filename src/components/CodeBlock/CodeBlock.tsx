@@ -11,8 +11,10 @@ import {
 import { FaReact } from 'react-icons/fa';
 import { MdNotes } from 'react-icons/md';
 import { VscJson } from 'react-icons/vsc';
-import { IoIosCode, IoMdClose } from 'react-icons/io';
+import { IoMdClose } from 'react-icons/io';
 import { WelcomeComponents } from '../welcome/Welcome';
+
+import AboutMe from '../About/About';
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -59,6 +61,14 @@ const CodeBlock = ({
   setNowTab,
   setOpenTab,
 }: CodeBlcokProps) => {
+	const tabComponents = {
+		'ABOUT ME': <AboutMe />,
+		SKILLS: <></>,
+		PROJECT: <></>,
+		ACTIVITY: <></>,
+		CONTACT: <></>,
+	}
+
   return (
     <CodeBluckStyle>
       <Bluck>
@@ -117,6 +127,10 @@ const CodeBlock = ({
               normalTitle={normalTitle}
             />
           )}
+
+		  {
+			
+		  }
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>
