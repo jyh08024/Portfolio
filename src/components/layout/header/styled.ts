@@ -21,23 +21,23 @@ export const HeaderContent = styled.div`
 `;
 
 export const LogoBackground = styled.div`
-	background: #febf00;
-	width: 100%;
-	height: 90px;
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
+  background: #febf00;
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
 `;
 
 export const LogoItem = styled.div`
-	height: 30%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	position: relative;
-	padding-top: 2rem;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 2rem;
 `;
 
 export const NavigationItem = styled.div`
@@ -61,7 +61,7 @@ export const UserItem = styled.div`
   flex-direction: column;
 
   h3 {
-	margin: 1.2rem 0 .3rem 0;
+    margin: 1.2rem 0 0.3rem 0;
   }
 
   p {
@@ -117,8 +117,8 @@ export const IconList = styled.div`
 `;
 
 export const FooterStyle = styled.div`
-	p {
-		margin: 0.2rem 0;
-		font-size: 14px;
-	}
+  p {
+    margin: 0.2rem 0;
+    font-size: 14px;
+  }
 `;

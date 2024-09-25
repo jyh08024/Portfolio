@@ -22,69 +22,93 @@ type propTypes = {
   setOpenTab: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
-const Header = ({ navigationData, userName, setNowTab, setOpenTab }: propTypes) => {
+const Header = ({
+  navigationData,
+  userName,
+  setNowTab,
+  setOpenTab,
+}: propTypes) => {
   return (
     <HeaderStyle>
       <LogoItem>
-		<LogoBackground />
-		<UserImage>
+        <LogoBackground />
+        <UserImage>
           <img src="/assets/image/profile2.png" alt="profileImage" />
         </UserImage>
-		<UserItem>
-			<h3>개발자 장영훈</h3>
-			<div>
-				<p>초보자도 보기 쉬운 간단한 코드를 지향합니다</p>
-			</div>
-		</UserItem>
+        <UserItem>
+          <h3>개발자 장영훈</h3>
+          <div>
+            <p>초보자도 보기 쉬운 간단한 코드를 지향합니다</p>
+          </div>
+        </UserItem>
       </LogoItem>
 
-	  <HeaderContent>
-		<nav>
-			{navigationData?.map((navItem: string) => (
-			<NavigationItem onClick={() => {
-				setNowTab(navItem);
-				setOpenTab((prevState) => prevState.includes(navItem) ? prevState : [...prevState, navItem]);
-			}}>
-				<div>
-					<p>{navItem}</p>
-				</div>
-			</NavigationItem>
-			))}
-		</nav>
+      <HeaderContent>
+        <nav>
+          {navigationData?.map((navItem: string) => (
+            <NavigationItem
+              onClick={() => {
+                setNowTab(navItem);
+                setOpenTab((prevState) =>
+                  prevState.includes(navItem)
+                    ? prevState
+                    : [...prevState, navItem]
+                );
+              }}
+            >
+              <div>
+                <p>{navItem}</p>
+              </div>
+            </NavigationItem>
+          ))}
+        </nav>
 
-		<FooterStyle>
-			<IconList>
-				<a href="https://github.com/jyh08024" target="_blank" rel="noreferrer">
-				<span>Github</span>
-				<FaGithub />
-				</a>
-				<a href="mailto:jyh08024@gmail.com" target="_blank" rel="noreferrer">
-				<span>Email</span>
-				<MdEmail />
-				</a>
-				<a
-				href="https://velog.io/@jyh08024/posts"
-				target="_blank"
-				rel="noreferrer"
-				>
-				<span>Blog</span>
-				<SiVelog />
-				</a>
-				<a
-				href="https://career.programmers.co.kr/pr/jyh08024_jyh"
-				target="_blank"
-				rel="noreferrer"
-				>
-				<span>Resume</span>
-				{/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
-				<IoDocumentTextSharp />
-				</a>
-			</IconList>
+        <FooterStyle>
+          <IconList>
+            <a
+              href="https://github.com/jyh08024"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Github</span>
+              <FaGithub />
+            </a>
+            <a
+              href="mailto:jyh08024@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Email</span>
+              <MdEmail />
+            </a>
+            <a
+              href="https://velog.io/@jyh08024/posts"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Blog</span>
+              <SiVelog />
+            </a>
+            <a
+              href="https://career.programmers.co.kr/pr/jyh08024_jyh"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Resume</span>
+              {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
+              <IoDocumentTextSharp />
+            </a>
+          </IconList>
 
-			<p>Copyright {new Date().getFullYear()}. {userName}. All Rights reserved. </p>
-			<p>Designed By <a href="https://github.com/jyh08024">장영훈</a> </p>
-		</FooterStyle>
-	  </HeaderContent>
+          <p>
+            Copyright {new Date().getFullYear()}. {userName}. All Rights
+            reserved.{' '}
+          </p>
+          <p>
+            Designed By <a href="https://github.com/jyh08024">장영훈</a>{' '}
+          </p>
+        </FooterStyle>
+      </HeaderContent>
     </HeaderStyle>
   );
 };

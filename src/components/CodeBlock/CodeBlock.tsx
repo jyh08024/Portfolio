@@ -10,8 +10,8 @@ import {
 } from './styled';
 import { FaReact } from 'react-icons/fa';
 import { MdNotes } from 'react-icons/md';
-import { VscJson } from "react-icons/vsc";
-import { IoIosCode, IoMdClose } from "react-icons/io";
+import { VscJson } from 'react-icons/vsc';
+import { IoIosCode, IoMdClose } from 'react-icons/io';
 import { WelcomeComponents } from '../welcome/Welcome';
 
 interface CodeBlcokProps {
@@ -29,28 +29,36 @@ interface FileIcon {
 }
 
 const fileIcon: FileIcon = {
-  'WELCOME': <MdNotes />,
+  WELCOME: <MdNotes />,
   'ABOUT ME': <FaReact color="#61dbfb" />,
-  "SKILLS": <VscJson color='#febf00' />,
-	"PROJECT": <VscJson color='#febf00' />,
-	"ACTIVITY": <MdNotes />,
-	"CONTACT": <IoMdClose  color='#ff5100' />,
+  SKILLS: <VscJson color="#febf00" />,
+  PROJECT: <VscJson color="#febf00" />,
+  ACTIVITY: <MdNotes />,
+  CONTACT: <IoMdClose color="#ff5100" />,
 };
 
 interface ExtensionName {
-	[key: string]: String;
+  [key: string]: String;
 }
 
 const extensionName: ExtensionName = {
-	"WELCOME": '.MD',
-	"ABOUT ME": 'ABOUT.ME',
-	"SKILLS": '.JSON',
-	"PROJECT": '.JSON',
-	"ACTIVITY": '.LOG',
-	"CONTACT": '.HTML',
-}
+  WELCOME: '.MD',
+  'ABOUT ME': 'ABOUT.ME',
+  SKILLS: '.JSON',
+  PROJECT: '.JSON',
+  ACTIVITY: '.LOG',
+  CONTACT: '.HTML',
+};
 
-const CodeBlock = ({ openTabList, nowTab, titleAnimation, titleAnimationData, normalTitle, setNowTab, setOpenTab }: CodeBlcokProps) => {
+const CodeBlock = ({
+  openTabList,
+  nowTab,
+  titleAnimation,
+  titleAnimationData,
+  normalTitle,
+  setNowTab,
+  setOpenTab,
+}: CodeBlcokProps) => {
   return (
     <CodeBluckStyle>
       <Bluck>
@@ -63,37 +71,52 @@ const CodeBlock = ({ openTabList, nowTab, titleAnimation, titleAnimationData, no
         <FileBar>
           <div className="file_list">
             {openTabList.map((tabName: string) => (
-              <FileItem data-nowTab={tabName === nowTab} onClick={() => {setNowTab(tabName)}}>
+              <FileItem
+                data-nowTab={tabName === nowTab}
+                onClick={() => {
+                  setNowTab(tabName);
+                }}
+              >
                 {fileIcon[tabName]}
-                <p>{tabName == 'ABOUT ME' ? extensionName?.[tabName] : tabName + extensionName?.[tabName]}</p>
-				{
-					nowTab == tabName && tabName !== 'WELCOME' &&
-				<div onClick={() => {
-					const deletedArr = openTabList?.filter((tab: string) =>  tab !== tabName);
-					setOpenTab(deletedArr);
-					setNowTab(deletedArr?.[0] || '');
-				}}>
-					<IoMdClose />
-				</div>
-				}
+                <p>
+                  {tabName == 'ABOUT ME'
+                    ? extensionName?.[tabName]
+                    : tabName + extensionName?.[tabName]}
+                </p>
+                {nowTab == tabName && tabName !== 'WELCOME' && (
+                  <div
+                    onClick={() => {
+                      const deletedArr = openTabList?.filter(
+                        (tab: string) => tab !== tabName
+                      );
+                      setOpenTab(deletedArr);
+                      setNowTab(deletedArr?.[0] || '');
+                    }}
+                  >
+                    <IoMdClose />
+                  </div>
+                )}
               </FileItem>
             ))}
           </div>
         </FileBar>
 
         <EditorContainer>
-		{
-			nowTab !== 'WELCOME' && 
-				<EditorLines>
-					{new Array(100).fill('').map((_: string, index: number) => (
-					<div className="line_item">{index + 1}</div>
-				))}
-          </EditorLines>
-		}
+          {nowTab !== 'WELCOME' && (
+            <EditorLines>
+              {new Array(100).fill('').map((_: string, index: number) => (
+                <div className="line_item">{index + 1}</div>
+              ))}
+            </EditorLines>
+          )}
 
-		{
-			nowTab == 'WELCOME' && <WelcomeComponents titleAnimation={titleAnimation} titleAnimationData={titleAnimationData} normalTitle={normalTitle} />
-		}
+          {nowTab == 'WELCOME' && (
+            <WelcomeComponents
+              titleAnimation={titleAnimation}
+              titleAnimationData={titleAnimationData}
+              normalTitle={normalTitle}
+            />
+          )}
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>

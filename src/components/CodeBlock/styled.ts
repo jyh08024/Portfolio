@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 interface MyDivProps {
-	'data-nowTab'?: boolean; // 혹은 필요에 따라 string, number 등
-  }
+  'data-nowTab'?: boolean; // 혹은 필요에 따라 string, number 등
+}
 
 export const CodeBluckStyle = styled.div`
   /* padding: 3rem; */
@@ -74,7 +74,8 @@ export const FileItem = styled.div<MyDivProps>`
   background: #333;
   cursor: pointer;
 
-  border-bottom: ${props => props['data-nowTab'] == true ? '1px solid #febf00' : ''};
+  border-bottom: ${(props) =>
+    props['data-nowTab'] == true ? '1px solid #febf00' : ''};
 
   p {
     margin-left: 8px;
@@ -83,23 +84,23 @@ export const FileItem = styled.div<MyDivProps>`
   }
 
   &:hover {
-	background-color: #443;
+    background-color: #443;
   }
 `;
 
 export const EditorContainer = styled.div`
-	height: calc(100% - 70px - 52px);
-	overflow: auto;
+  height: calc(100% - 70px - 52px);
+  overflow: auto;
 `;
 
 export const EditorLines = styled.div`
-	width: 5%;
-	.line_item {
-		width: 100%;
-		text-align: center;
-		/*padding: .2rem 2.4rem;*/
-		font-size: 1.2rem;
-		color: #ffffff50;
-		margin: .4rem 0;
-	}
+  width: 5%;
+  .line_item {
+    width: 100%;
+    text-align: center;
+    /*padding: .2rem 2.4rem;*/
+    font-size: 1.2rem;
+    color: #ffffff50;
+    margin: 0.4rem 0;
+  }
 `;
