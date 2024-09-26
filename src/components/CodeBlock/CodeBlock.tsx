@@ -128,7 +128,9 @@ const CodeBlock = ({
             />
           )}
 
-		  {
+		  {nowTab == 'ABOUT ME' && (
+			<AboutMe />
+		  )
 			
 		  }
         </EditorContainer>
