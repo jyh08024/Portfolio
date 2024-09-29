@@ -89,8 +89,10 @@ export const FileItem = styled.div<MyDivProps>`
 `;
 
 export const EditorContainer = styled.div`
+padding-top: 1.2rem;
   height: calc(100% - 70px - 52px);
   overflow: auto;
+  display: flex;
 `;
 
 export const EditorLines = styled.div`
@@ -99,7 +101,7 @@ export const EditorLines = styled.div`
     width: 100%;
     text-align: center;
     /*padding: .2rem 2.4rem;*/
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #ffffff50;
     margin: 0.4rem 0;
   }

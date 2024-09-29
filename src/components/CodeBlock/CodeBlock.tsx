@@ -36,7 +36,7 @@ const fileIcon: FileIcon = {
   SKILLS: <VscJson color="#febf00" />,
   PROJECT: <VscJson color="#febf00" />,
   ACTIVITY: <MdNotes />,
-  CONTACT: <IoMdClose color="#ff5100" />,
+//  CONTACT: <IoMdClose color="#ff5100" />,
 };
 
 interface ExtensionName {
@@ -61,7 +61,7 @@ const CodeBlock = ({
   setNowTab,
   setOpenTab,
 }: CodeBlcokProps) => {
-	const tabComponents = {
+	const tabComponents: any = {
 		'ABOUT ME': <AboutMe />,
 		SKILLS: <></>,
 		PROJECT: <></>,
@@ -114,7 +114,7 @@ const CodeBlock = ({
         <EditorContainer>
           {nowTab !== 'WELCOME' && (
             <EditorLines>
-              {new Array(100).fill('').map((_: string, index: number) => (
+              {new Array(22).fill('').map((_: string, index: number) => (
                 <div className="line_item">{index + 1}</div>
               ))}
             </EditorLines>
@@ -128,11 +128,7 @@ const CodeBlock = ({
             />
           )}
 
-		  {nowTab == 'ABOUT ME' && (
-			<AboutMe />
-		  )
-			
-		  }
+		{tabComponents?.[nowTab]}
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>
