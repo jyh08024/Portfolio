@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   WelcomeStyle,
   WelcomeTitle,
   TypingArea,
   WelcomeContent,
-} from './styled';
-import useInterval from '../../hooks/useInterval';
+} from "./styled";
+import useInterval from "../../hooks/useInterval";
 
 interface WelcomeTypes {
   titleAnimation: boolean;
@@ -18,7 +18,7 @@ export const WelcomeComponents = ({
   titleAnimationData,
   normalTitle,
 }: WelcomeTypes) => {
-  const [displayText, setDisplayText] = useState<string>('');
+  const [displayText, setDisplayText] = useState<string>("");
   const [dataIndex, setDataIndex] = useState<number>(0);
   const [curIndex, setCurIndex] = useState<number>(0);
   const [backspace, setBackspace] = useState<boolean>(false);

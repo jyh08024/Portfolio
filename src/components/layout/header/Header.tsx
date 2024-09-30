@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   HeaderStyle,
   NavigationItem,
@@ -9,11 +9,11 @@ import {
   LogoBackground,
   HeaderContent,
   FooterStyle,
-} from './styled';
-import { FaGithub } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { SiVelog } from 'react-icons/si';
-import { IoDocumentTextSharp } from 'react-icons/io5';
+} from "./styled";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { SiVelog } from "react-icons/si";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 type propTypes = {
   navigationData: string[];
@@ -102,10 +102,10 @@ const Header = ({
 
           <p>
             Copyright {new Date().getFullYear()}. {userName}. All Rights
-            reserved.{' '}
+            reserved.{" "}
           </p>
           <p>
-            Designed By <a href="https://github.com/jyh08024">장영훈</a>{' '}
+            Designed By <a href="https://github.com/jyh08024">장영훈</a>{" "}
           </p>
         </FooterStyle>
       </HeaderContent>

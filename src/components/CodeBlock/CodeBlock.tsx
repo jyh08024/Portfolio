@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 import {
   CodeBluckStyle,
   Bluck,
@@ -7,14 +7,14 @@ import {
   FileItem,
   EditorContainer,
   EditorLines,
-} from './styled';
-import { FaReact } from 'react-icons/fa';
-import { MdNotes } from 'react-icons/md';
-import { VscJson } from 'react-icons/vsc';
-import { IoMdClose } from 'react-icons/io';
-import { WelcomeComponents } from '../welcome/Welcome';
+} from "./styled";
+import { FaReact } from "react-icons/fa";
+import { MdNotes } from "react-icons/md";
+import { VscJson } from "react-icons/vsc";
+import { IoMdClose } from "react-icons/io";
+import { WelcomeComponents } from "../welcome/Welcome";
 
-import AboutMe from '../About/About';
+import AboutMe from "../About/About";
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -32,11 +32,11 @@ interface FileIcon {
 
 const fileIcon: FileIcon = {
   WELCOME: <MdNotes />,
-  'ABOUT ME': <FaReact color="#61dbfb" />,
+  "ABOUT ME": <FaReact color="#61dbfb" />,
   SKILLS: <VscJson color="#febf00" />,
   PROJECT: <VscJson color="#febf00" />,
   ACTIVITY: <MdNotes />,
-//  CONTACT: <IoMdClose color="#ff5100" />,
+  //  CONTACT: <IoMdClose color="#ff5100" />,
 };
 
 interface ExtensionName {
@@ -44,12 +44,12 @@ interface ExtensionName {
 }
 
 const extensionName: ExtensionName = {
-  WELCOME: '.MD',
-  'ABOUT ME': 'ABOUT.ME',
-  SKILLS: '.JSON',
-  PROJECT: '.JSON',
-  ACTIVITY: '.LOG',
-  CONTACT: '.HTML',
+  WELCOME: ".MD",
+  "ABOUT ME": "ABOUT.ME",
+  SKILLS: ".JSON",
+  PROJECT: ".JSON",
+  ACTIVITY: ".LOG",
+  CONTACT: ".HTML",
 };
 
 const CodeBlock = ({
@@ -61,13 +61,13 @@ const CodeBlock = ({
   setNowTab,
   setOpenTab,
 }: CodeBlcokProps) => {
-	const tabComponents: any = {
-		'ABOUT ME': <AboutMe />,
-		SKILLS: <></>,
-		PROJECT: <></>,
-		ACTIVITY: <></>,
-		CONTACT: <></>,
-	}
+  const tabComponents: any = {
+    "ABOUT ME": <AboutMe />,
+    SKILLS: <></>,
+    PROJECT: <></>,
+    ACTIVITY: <></>,
+    CONTACT: <></>,
+  };
 
   return (
     <CodeBluckStyle>
@@ -89,18 +89,18 @@ const CodeBlock = ({
               >
                 {fileIcon[tabName]}
                 <p>
-                  {tabName == 'ABOUT ME'
+                  {tabName == "ABOUT ME"
                     ? extensionName?.[tabName]
                     : tabName + extensionName?.[tabName]}
                 </p>
-                {nowTab == tabName && tabName !== 'WELCOME' && (
+                {nowTab == tabName && tabName !== "WELCOME" && (
                   <div
                     onClick={() => {
                       const deletedArr = openTabList?.filter(
                         (tab: string) => tab !== tabName
                       );
                       setOpenTab(deletedArr);
-                      setNowTab(deletedArr?.[0] || '');
+                      setNowTab(deletedArr?.[0] || "");
                     }}
                   >
                     <IoMdClose />
@@ -112,15 +112,15 @@ const CodeBlock = ({
         </FileBar>
 
         <EditorContainer>
-          {nowTab !== 'WELCOME' && (
+          {nowTab !== "WELCOME" && (
             <EditorLines>
-              {new Array(22).fill('').map((_: string, index: number) => (
+              {new Array(22).fill("").map((_: string, index: number) => (
                 <div className="line_item">{index + 1}</div>
               ))}
             </EditorLines>
           )}
 
-          {nowTab == 'WELCOME' && (
+          {nowTab == "WELCOME" && (
             <WelcomeComponents
               titleAnimation={titleAnimation}
               titleAnimationData={titleAnimationData}
@@ -128,7 +128,7 @@ const CodeBlock = ({
             />
           )}
 
-		{tabComponents?.[nowTab]}
+          {tabComponents?.[nowTab]}
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>

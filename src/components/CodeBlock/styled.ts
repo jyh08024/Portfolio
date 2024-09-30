@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface MyDivProps {
-  'data-nowTab'?: boolean; // 혹은 필요에 따라 string, number 등
+  "data-nowTab"?: boolean; // 혹은 필요에 따라 string, number 등
 }
 
 export const CodeBluckStyle = styled.div`
@@ -75,7 +75,7 @@ export const FileItem = styled.div<MyDivProps>`
   cursor: pointer;
 
   border-bottom: ${(props) =>
-    props['data-nowTab'] == true ? '1px solid #febf00' : ''};
+    props["data-nowTab"] == true ? "1px solid #febf00" : ""};
 
   p {
     margin-left: 8px;
@@ -89,7 +89,7 @@ export const FileItem = styled.div<MyDivProps>`
 `;
 
 export const EditorContainer = styled.div`
-padding-top: 1.2rem;
+  padding-top: 1.2rem;
   height: calc(100% - 70px - 52px);
   overflow: auto;
   display: flex;
