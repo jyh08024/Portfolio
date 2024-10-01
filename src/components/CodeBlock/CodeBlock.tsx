@@ -15,6 +15,7 @@ import { IoMdClose } from "react-icons/io";
 import { WelcomeComponents } from "../welcome/Welcome";
 
 import AboutMe from "../About/About";
+import Skills from "../Skills/Skills";
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -63,7 +64,7 @@ const CodeBlock = ({
 }: CodeBlcokProps) => {
   const tabComponents: any = {
     "ABOUT ME": <AboutMe />,
-    SKILLS: <></>,
+    SKILLS: <Skills />,
     PROJECT: <></>,
     ACTIVITY: <></>,
     CONTACT: <></>,
