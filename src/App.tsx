@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import './App.css';
 import Header from './components/layout/header/Header';
 import CodeBlock from './components/CodeBlock/CodeBlock';
@@ -8,9 +8,9 @@ const copyrightName = '장영훈';
 const headerNavigationData: string[] = [
   'ABOUT ME',
   'SKILLS',
+  'CAREER',
   'PROJECT',
   'ACTIVITY',
-  'CONTACT',
 ];
 const titleAnimationData: string[] = [
   'React, TypeScript',
@@ -24,8 +24,10 @@ const normalTitle = '저는 프론트엔드 개발자 장영훈입니다.';
 const titleAnimation = true;
 
 const App = () => {
-  const [openTabList, setOpenTab] = useState<string[]>(['WELCOME']);
+  const [openTabList, setOpenTab] = useState<string[]>(['WELCOME', ...headerNavigationData]);
   const [nowTab, setNowTab] = useState<string>('WELCOME');
+
+  const handleSetNowTab = useCallback((newTab: string) => setNowTab(newTab), []);
 
   return (
     <>
@@ -42,7 +44,7 @@ const App = () => {
           titleAnimation={titleAnimation}
           titleAnimationData={titleAnimationData}
           normalTitle={normalTitle}
-          setNowTab={setNowTab}
+          setNowTab={handleSetNowTab}
           setOpenTab={setOpenTab}
         />
       </div>

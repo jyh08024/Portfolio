@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import {
   CodeBluckStyle,
   Bluck,
@@ -16,6 +16,7 @@ import { WelcomeComponents } from "../welcome/Welcome";
 
 import AboutMe from "../About/About";
 import Skills from "../Skills/Skills";
+import Career from "../Career/Career";
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -23,7 +24,7 @@ interface CodeBlcokProps {
   titleAnimation: boolean;
   titleAnimationData: string[];
   normalTitle: string;
-  setNowTab: React.Dispatch<React.SetStateAction<string>>;
+  setNowTab: any;
   setOpenTab: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
@@ -50,7 +51,7 @@ const extensionName: ExtensionName = {
   SKILLS: ".JSON",
   PROJECT: ".JSON",
   ACTIVITY: ".LOG",
-  CONTACT: ".HTML",
+  CAREER: ".HTML",
 };
 
 const CodeBlock = ({
@@ -63,11 +64,16 @@ const CodeBlock = ({
   setOpenTab,
 }: CodeBlcokProps) => {
   const tabComponents: any = {
+	WELCOME: <WelcomeComponents
+	titleAnimation={titleAnimation}
+	titleAnimationData={titleAnimationData}
+	normalTitle={normalTitle}
+  	/>,
     "ABOUT ME": <AboutMe />,
     SKILLS: <Skills />,
     PROJECT: <></>,
     ACTIVITY: <></>,
-    CONTACT: <></>,
+    CAREER: <Career></Career>,
   };
 
   return (
@@ -83,9 +89,10 @@ const CodeBlock = ({
           <div className="file_list">
             {openTabList.map((tabName: string) => (
               <FileItem
+				key={tabName}
                 data-nowTab={tabName === nowTab}
                 onClick={() => {
-                  setNowTab(tabName);
+					setNowTab(tabName);
                 }}
               >
                 {fileIcon[tabName]}
@@ -94,19 +101,19 @@ const CodeBlock = ({
                     ? extensionName?.[tabName]
                     : tabName + extensionName?.[tabName]}
                 </p>
-                {nowTab == tabName && tabName !== "WELCOME" && (
+                {/*{nowTab == tabName && tabName !== "WELCOME" && (
                   <div
-                    onClick={() => {
+				  	onClick={() => {
                       const deletedArr = openTabList?.filter(
                         (tab: string) => tab !== tabName
                       );
-                      setOpenTab(deletedArr);
                       setNowTab(deletedArr?.[0] || "");
+                      setOpenTab(deletedArr);
                     }}
                   >
                     <IoMdClose />
                   </div>
-                )}
+                )}*/}
               </FileItem>
             ))}
           </div>
@@ -119,14 +126,6 @@ const CodeBlock = ({
                 <div className="line_item">{index + 1}</div>
               ))}
             </EditorLines>
-          )}
-
-          {nowTab == "WELCOME" && (
-            <WelcomeComponents
-              titleAnimation={titleAnimation}
-              titleAnimationData={titleAnimationData}
-              normalTitle={normalTitle}
-            />
           )}
 
           {tabComponents?.[nowTab]}

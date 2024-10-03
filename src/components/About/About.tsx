@@ -63,7 +63,7 @@ const AboutMe = () => {
           <p className="transparent">-</p>
           <p>
             &nbsp;&nbsp;&nbsp;&nbsp;<span className="blue">return</span>{" "}
-            <a href="https://career.programmers.co.kr/pr/jyh08024_jyh">
+            <a href="https://career.programmers.co.kr/pr/jyh08024_jyh" target="_blank">
               장영훈_이력서
             </a>{" "}
             <span className="blue">;</span>
