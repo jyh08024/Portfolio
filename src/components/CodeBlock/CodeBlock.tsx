@@ -8,7 +8,7 @@ import {
   EditorContainer,
   EditorLines,
 } from "./styled";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaHtml5 } from "react-icons/fa";
 import { MdNotes } from "react-icons/md";
 import { VscJson } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
@@ -38,7 +38,7 @@ const fileIcon: FileIcon = {
   SKILLS: <VscJson color="#febf00" />,
   PROJECT: <VscJson color="#febf00" />,
   ACTIVITY: <MdNotes />,
-  //  CONTACT: <IoMdClose color="#ff5100" />,
+  CAREER: <FaHtml5 color="#ff5100" />,
 };
 
 interface ExtensionName {
@@ -64,11 +64,13 @@ const CodeBlock = ({
   setOpenTab,
 }: CodeBlcokProps) => {
   const tabComponents: any = {
-	WELCOME: <WelcomeComponents
-	titleAnimation={titleAnimation}
-	titleAnimationData={titleAnimationData}
-	normalTitle={normalTitle}
-  	/>,
+    WELCOME: (
+      <WelcomeComponents
+        titleAnimation={titleAnimation}
+        titleAnimationData={titleAnimationData}
+        normalTitle={normalTitle}
+      />
+    ),
     "ABOUT ME": <AboutMe />,
     SKILLS: <Skills />,
     PROJECT: <></>,
@@ -89,10 +91,10 @@ const CodeBlock = ({
           <div className="file_list">
             {openTabList.map((tabName: string) => (
               <FileItem
-				key={tabName}
+                key={tabName}
                 data-nowTab={tabName === nowTab}
                 onClick={() => {
-					setNowTab(tabName);
+                  setNowTab(tabName);
                 }}
               >
                 {fileIcon[tabName]}
