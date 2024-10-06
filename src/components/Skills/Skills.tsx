@@ -4,6 +4,7 @@ const Skills = () => {
 
 	return (
 		<SkillsStyle>
+			<div className="title"><b>SKILLS</b></div>
 			<SkillsList>
 				<div>
 					<p className='yellow'>&#123;</p>

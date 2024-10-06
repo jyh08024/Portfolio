@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const SkillsStyle = styled.div`
 	width: 100%;
+
+	.title {
+    	font-size: 1.6rem;
+    	margin: 0.4rem 0;
+    	color: #febf00;
+  	}
 `;
 
 export const SkillsList = styled.div`
