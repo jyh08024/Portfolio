@@ -45,6 +45,10 @@ interface ExtensionName {
   [key: string]: String;
 }
 
+interface CodeLines {
+	[key: string]: number;
+  }
+
 const extensionName: ExtensionName = {
   WELCOME: ".MD",
   "ABOUT ME": "ABOUT.ME",
@@ -76,6 +80,15 @@ const CodeBlock = ({
     PROJECT: <></>,
     ACTIVITY: <></>,
     CAREER: <Career></Career>,
+  };
+
+  const codeLines: CodeLines = {
+	WELCOME: 0,
+	"ABOUT ME": 21,
+	SKILLS: 22,
+	PROJECT: 22,
+	ACTIVITY: 22,
+	CAREER: 36,
   };
 
   return (
@@ -124,7 +137,7 @@ const CodeBlock = ({
         <EditorContainer>
           {nowTab !== "WELCOME" && (
             <EditorLines>
-              {new Array(22).fill("").map((_: string, index: number) => (
+              {new Array(codeLines?.[nowTab] || 22).fill("").map((_: string, index: number) => (
                 <div className="line_item">{index + 1}</div>
               ))}
             </EditorLines>
