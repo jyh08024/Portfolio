@@ -104,4 +104,10 @@ export const GlobalStyled = createGlobalStyle`
 	display: flex;
 	justify-content: space-between;
   }
+
+  .title {
+		font-size: 1.6rem;
+    	margin: 0.4rem 0;
+		color: #febf00;
+  }
 `;
