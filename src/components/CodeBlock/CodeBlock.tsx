@@ -17,6 +17,7 @@ import { WelcomeComponents } from "../welcome/Welcome";
 import AboutMe from "../About/About";
 import Skills from "../Skills/Skills";
 import Career from "../Career/Career";
+import Project from "../Project/Project";
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -77,7 +78,7 @@ const CodeBlock = ({
     ),
     "ABOUT ME": <AboutMe />,
     SKILLS: <Skills />,
-    PROJECT: <></>,
+    PROJECT: <Project />,
     ACTIVITY: <></>,
     CAREER: <Career></Career>,
   };
@@ -85,7 +86,7 @@ const CodeBlock = ({
   const codeLines: CodeLines = {
 	WELCOME: 0,
 	"ABOUT ME": 21,
-	SKILLS: 22,
+	SKILLS: 0,
 	PROJECT: 22,
 	ACTIVITY: 22,
 	CAREER: 36,
@@ -135,7 +136,7 @@ const CodeBlock = ({
         </FileBar>
 
         <EditorContainer>
-          {nowTab !== "WELCOME" && (
+          {!["WELCOME", "PROJECT"].includes(nowTab) && (
             <EditorLines>
               {new Array(codeLines?.[nowTab] || 22).fill("").map((_: string, index: number) => (
                 <div className="line_item">{index + 1}</div>
