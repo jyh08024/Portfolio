@@ -18,6 +18,7 @@ import AboutMe from "../About/About";
 import Skills from "../Skills/Skills";
 import Career from "../Career/Career";
 import Project from "../Project/Project";
+import Activity from "../Activity/Activity";
 
 interface CodeBlcokProps {
   openTabList: string[];
@@ -79,7 +80,7 @@ const CodeBlock = ({
     "ABOUT ME": <AboutMe />,
     SKILLS: <Skills />,
     PROJECT: <Project />,
-    ACTIVITY: <></>,
+    ACTIVITY: <Activity />,
     CAREER: <Career></Career>,
   };
 
@@ -88,7 +89,7 @@ const CodeBlock = ({
     "ABOUT ME": 21,
     SKILLS: 0,
     PROJECT: 22,
-    ACTIVITY: 22,
+    ACTIVITY: 36,
     CAREER: 36,
   };
 
