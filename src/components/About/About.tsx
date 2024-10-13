@@ -59,11 +59,19 @@ const AboutMe = () => {
               "jyh2980465@gmail.com ( jyh08024@gmail.com )"
             </span>
           </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className="blue">const</span> 학력{" "}
+            <span className="purpleRed">=</span>{" "}
+            <span className="green">"안산공업고등학교 컴퓨터과 (졸업)"</span>
+          </p>
 
           <p className="transparent">-</p>
           <p>
             &nbsp;&nbsp;&nbsp;&nbsp;<span className="blue">return</span>{" "}
-            <a href="https://career.programmers.co.kr/pr/jyh08024_jyh" target="_blank">
+            <a
+              href="https://career.programmers.co.kr/pr/jyh08024_jyh"
+              target="_blank"
+            >
               장영훈_이력서
             </a>{" "}
             <span className="blue">;</span>
