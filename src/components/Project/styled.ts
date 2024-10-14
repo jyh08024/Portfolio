@@ -24,6 +24,11 @@ export const ProjectItem = styled.div`
   overflow: hidden;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const ProjectImage = styled.div`
@@ -40,10 +45,15 @@ export const ProjectImage = styled.div`
     object-fit: cover;
     object-position: left;
   }
+
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+    height: 30%;
+  }
 `;
 
 export const ProjectInfo = styled.div`
-  padding: 60px 32px;
+  padding: 3.7rem 32px;
   height: 100%;
   color: #333;
   display: flex;
@@ -51,20 +61,20 @@ export const ProjectInfo = styled.div`
   justify-content: space-between;
 
   .project_title {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #333;
   }
 
   .project_type {
     margin-top: 4px;
-    font-size: 300;
+    font-weight: 3;
     color: #232fa9;
   }
 
   .project_explain {
     margin-top: 16px;
-    font-size: 22px;
+    font-size: 1.4rem;
   }
 
   .info_container {
@@ -121,7 +131,7 @@ export const ProjectInfo = styled.div`
 
       p {
         margin-left: 8px;
-        font-size: 18px;
+        font-size: 1.1rem;
       }
     }
 
@@ -137,8 +147,11 @@ export const ProjectInfo = styled.div`
 
       p {
         margin-left: 8px;
-        font-size: 18px;
+        font-size: 1.1rem;
       }
     }
+  }
+  @media screen and (max-width: 1300px) {
+    padding: 2rem 32px;
   }
 `;

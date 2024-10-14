@@ -14,7 +14,7 @@ export const ActivityContainer = styled.div`
 
 export const ActivityList = styled.div`
   width: 48%;
-  padding: 24px 32px;
+  padding: 20px 0;
   /* background: #f4f5fc; */
   border-radius: 8px;
   margin-top: 18px;
@@ -23,6 +23,10 @@ export const ActivityList = styled.div`
     font-size: 24px;
     margin-bottom: 10px;
     color: #fff;
+  }
+
+  @media screen and (max-width: 1070px) {
+    width: 100%;
   }
 `;
 

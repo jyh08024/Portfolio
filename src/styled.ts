@@ -121,4 +121,22 @@ export const GlobalStyled = createGlobalStyle`
     	margin: 0.4rem 0;
 		color: #febf00;
   }
+
+  @media only screen and (max-width: 1600px) {
+	html, body {
+		font-size: 15px;
+	}
+  }
+
+  @media only screen and (max-width: 1440px) {
+	html, body {
+		font-size: 14px;
+	}
+  }
+
+  @media only screen and (max-width: 1300px) {
+	html, body {
+		font-size: 12px;
+	}
+  }
 `;

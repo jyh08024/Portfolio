@@ -51,13 +51,7 @@ const Activity = () => {
             <div className="act_item">
               <div className="act_name">
                 <b>
-                  <a
-                    href="https://www.kgnews.co.kr/news/article.html?no=727771"
-                    target="_blank"
-                  >
-                    2022 전국기능경기대회 웹디자인 및 개발 동메달 (3위)
-                    (2022-09)
-                  </a>
+                  2022 전국기능경기대회 웹디자인 및 개발 동메달 (3위) (2022-09)
                 </b>
               </div>
 

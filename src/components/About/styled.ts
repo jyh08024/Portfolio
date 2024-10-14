@@ -12,8 +12,12 @@ export const AboutContent = styled.div`
 
   p {
     color: #f4f5fc;
-    margin: 0.4rem 0;
+    margin: 0.4rem 0 0.4rem 2rem;
     font-size: 1.6rem;
+
+    &.not_padding {
+      margin: 0.4rem 0;
+    }
 
     &.yellow {
       color: #febf00;
@@ -62,8 +66,8 @@ export const AboutContent = styled.div`
 
   .profile_image {
     margin-top: 2rem;
-    width: 320px;
-    height: 320px;
+    width: 20rem;
+    height: 20rem;
     overflow: hidden;
     border-radius: 50%;
 
@@ -71,6 +75,11 @@ export const AboutContent = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @media screen and (max-width: 1600px) {
+      width: 16rem;
+      height: 16rem;
     }
   }
 `;

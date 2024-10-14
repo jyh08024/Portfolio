@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { defaultTheme } from '../../../theme';
+import styled from "styled-components";
+import { defaultTheme } from "../../../theme";
 
 export const HeaderStyle = styled.header`
   /*position: fixed;*/
   /*left: 0;*/
   height: 100vh;
-  width: 16%;
+  width: 20rem;
   background: #f4f5fc;
   background-color: #434041;
   color: #f4f5fc;
@@ -41,7 +41,7 @@ export const LogoItem = styled.div`
 `;
 
 export const NavigationItem = styled.div`
-  font-size: 22px;
+  font-size: 1.4rem;
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   transition: 0.4s;
@@ -65,7 +65,7 @@ export const UserItem = styled.div`
   }
 
   p {
-    font-size: 14px;
+    font-size: 1rem;
   }
 `;
 
@@ -98,7 +98,7 @@ export const IconList = styled.div`
     flex-direction: column;
 
     span {
-      font-size: 14px;
+      font-size: 0.9rem;
       opacity: 0.7;
       margin-bottom: 0.4rem;
     }
@@ -119,6 +119,6 @@ export const IconList = styled.div`
 export const FooterStyle = styled.div`
   p {
     margin: 0.2rem 0;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 `;
