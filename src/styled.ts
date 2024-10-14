@@ -1,9 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyled = createGlobalStyle`
 	// 스크롤바 전체(넓이 지정)
 	::-webkit-scrollbar {
 		width: 8px;
+    height: 8px;
 	}
 	// 스크롤바 표시
 	::-webkit-scrollbar-thumb {
@@ -74,13 +75,23 @@ export const GlobalStyled = createGlobalStyle`
     src: url('/assets/fonts/Pretendard-Black.otf');
   }
 
+  @font-face {
+    font-family: "Menlo";
+    src: url('/assets/fonts/Menlo-Regular.ttf');
+  }
+
+  /* @font-face {
+    font-family: "Monaco";
+    src: url('/assets/fonts/Monaco-Linux.ttf');
+  } */
+
   //웹 기본 스타일 초기화
   * {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: Pretendard;
+    font-family: "Menlo", "Pretendard", "Microsoft Phagspa";
 
     outline: none;
     word-break: break-all;
@@ -93,7 +104,7 @@ export const GlobalStyled = createGlobalStyle`
   
   html, body {
     font-size: 16px;
-    font-family: "Pretendard", "Microsoft Phagspa";
+    font-family: "Menlo", "Pretendard", "Microsoft Phagspa";
     letter-spacing: -1px;
   }
 
