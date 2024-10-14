@@ -58,6 +58,8 @@ export const FileBar = styled.div`
   overflow: auto;
   background: #444;
 
+  scrollbar-width: none;
+
   .file_list {
     width: auto;
     display: flex;
@@ -65,11 +67,10 @@ export const FileBar = styled.div`
 `;
 
 export const FileItem = styled.div<MyDivProps>`
-  min-width: 100px;
+  min-width: 180px;
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: #ffffff;
   background: #333;
   cursor: pointer;
@@ -78,7 +79,7 @@ export const FileItem = styled.div<MyDivProps>`
     props["data-nowTab"] == true ? "1px solid #febf00" : ""};
 
   p {
-    margin-left: 8px;
+    margin-left: 10px;
     margin-right: 20px;
     color: #febf00;
   }

@@ -81,7 +81,7 @@ const CodeBlock = ({
     SKILLS: <Skills />,
     PROJECT: <Project />,
     ACTIVITY: <Activity />,
-    CAREER: <Career></Career>,
+    CAREER: <Career />,
   };
 
   const codeLines: CodeLines = {
@@ -90,7 +90,7 @@ const CodeBlock = ({
     SKILLS: 0,
     PROJECT: 22,
     ACTIVITY: 36,
-    CAREER: 36,
+    CAREER: 54,
   };
 
   return (

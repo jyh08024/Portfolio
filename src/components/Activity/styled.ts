@@ -13,15 +13,16 @@ export const ActivityContainer = styled.div`
 `;
 
 export const ActivityList = styled.div`
-  width: 45%;
+  width: 48%;
   padding: 24px 32px;
-  background: #f4f5fc;
+  /* background: #f4f5fc; */
   border-radius: 8px;
-  margin-top: 10px;
+  margin-top: 18px;
 
   .act_title {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff;
   }
 `;
 
@@ -33,6 +34,7 @@ export const ActivityItem = styled.div`
     padding-bottom: 40px;
     position: relative;
     border-left: 2px solid #febf00;
+    color: #fff;
 
     &::after {
       content: "";
@@ -62,6 +64,7 @@ export const ActivityItem = styled.div`
       padding-top: 8px;
       padding-bottom: 8px;
       padding-left: 10px;
+      opacity: 0.7;
     }
   }
 `;
