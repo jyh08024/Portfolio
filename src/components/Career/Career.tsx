@@ -157,6 +157,101 @@ const Career = () => {
             </div>
           </div>
         </CareerItem>
+
+        <CareerItem>
+          <div></div>
+          <div>
+            <p className="period">2022.11 ~ 2023.01</p>
+          </div>
+          <div>
+            <p className="company">
+              <a href="#" target="_blank">
+                사내 웹서비스 개발 외주
+              </a>
+            </p>
+          </div>
+          <div>
+            <p className="position">프론트엔드 개발 및 배포</p>
+          </div>
+          <div>
+            <p className="explain">
+              L사의 사내 웹서비스의 개발 및 유지 보수를 진행하였습니다.
+            </p>
+          </div>
+          <div>
+            <p className="explain">
+              HTML,CSS, JavaScript, Swiper.js, PHP, CodeEgniter, git 사용
+            </p>
+          </div>
+
+          <div className="resultItem">
+            <div>
+              <p className="result">
+                사이트 내 애니메이션의 전반을 담당하였습니다.
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">
+                로딩 애니메이션, 비주얼 애니메이션, 스크롤 애니메이션 등
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">특정 요소의 슬라이드 애니메이션 등</p>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div className="resultItem">
+            <div>
+              <p className="result">메인페이지</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                메인페이지의 전반적인 개발을 담당하였습니다.
+              </p>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div className="resultItem">
+            <div>
+              <p className="result">칼럼, VIDEO, EVENT 페이지 개발</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                각종 칼럼들을 담고있는 칼럼 페이지의 개발을 담당했습니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="result_ex">
+                VIMEO를 사용해 비디오를 재생, 커스텀 컨트롤러를 개발했습니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="result_ex">
+                API 연동을 통해 입력 정보를 송,수신하는 EVENT 페이지를
+                개발했습니다.
+              </p>
+            </div>
+          </div>
+
+          <div></div>
+
+          <div className="resultItem">
+            <div>
+              <p className="result">배포 진행</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                완성된 작업물을 서버에 배포하는 작업을 담당하였습니다.
+              </p>
+            </div>
+          </div>
+        </CareerItem>
       </CareerList>
     </CareerStyle>
   );

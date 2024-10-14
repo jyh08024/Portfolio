@@ -11,7 +11,6 @@ export const CareerStyle = styled.div`
 
   .title {
     font-size: 1.6rem;
-    margin: 0.4rem 0;
     color: #febf00;
   }
 `;
@@ -25,7 +24,7 @@ export const CareerItem = styled.div`
     height: 30px;
     display: flex;
     align-items: center;
-    margin: 6.5px 0;
+    margin: 7px 0;
   }
 
   p {
