@@ -17,10 +17,7 @@ const Project = () => {
       <ProjectList>
         <ProjectItem>
           <ProjectImage>
-            <img
-              src="/assets/image/project/portfolio.png"
-              alt="project_image"
-            />
+            <img src="assets/image/project/portfolio.png" alt="project_image" />
           </ProjectImage>
           <ProjectInfo>
             <div>
@@ -69,7 +66,7 @@ const Project = () => {
         <ProjectItem>
           <ProjectImage>
             <img
-              src="/assets/image/project/planwith/home_normal.png"
+              src="assets/image/project/planwith/home_normal.png"
               alt="project_image"
             />
           </ProjectImage>
