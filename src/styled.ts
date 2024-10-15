@@ -18,71 +18,71 @@ export const GlobalStyled = createGlobalStyle`
 
   @font-face {
     font-family: "BlackHanSans";
-    src: url('/assets/fonts/BlackHanSans-Regular.ttf');
+    src: url('/Portfolio/assets/fonts/BlackHanSans-Regular.ttf');
   }
 
 	@font-face {
     font-family: "Pretendard";
     font-weight: 100;
-    src: url('/assets/fonts/Pretendard-Thin.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Thin.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 200;
-    src: url('/assets/fonts/Pretendard-ExtraLight.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-ExtraLight.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 300;
-    src: url('/assets/fonts/Pretendard-Light.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Light.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 400;
-    src: url('/assets/fonts/Pretendard-Regular.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Regular.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 500;
-    src: url('/assets/fonts/Pretendard-Medium.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Medium.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 600;
-    src: url('/assets/fonts/Pretendard-SemiBold.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-SemiBold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 700;
-    src: url('/assets/fonts/Pretendard-Bold.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Bold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 800;
-    src: url('/assets/fonts/Pretendard-ExtraBold.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-ExtraBold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 900;
-    src: url('/assets/fonts/Pretendard-Black.otf');
+    src: url('/Portfolio/assets/fonts/Pretendard-Black.otf');
   }
 
   @font-face {
     font-family: "Menlo";
-    src: url('/assets/fonts/Menlo-Regular.ttf');
+    src: url('/Portfolio/assets/fonts/Menlo-Regular.ttf');
   }
 
   /* @font-face {
     font-family: "Monaco";
-    src: url('/assets/fonts/Monaco-Linux.ttf');
+    src: url('/Portfolio/assets/fonts/Monaco-Linux.ttf');
   } */
 
   //웹 기본 스타일 초기화

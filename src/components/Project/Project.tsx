@@ -18,7 +18,7 @@ const Project = () => {
         <ProjectItem>
           <ProjectImage>
             <img
-              src="/assets/image/project/portfolio.png"
+              src="/Portfolio/assets/image/project/portfolio.png"
               alt="project_image"
             />
           </ProjectImage>
@@ -69,7 +69,7 @@ const Project = () => {
         <ProjectItem>
           <ProjectImage>
             <img
-              src="/assets/image/project/planwith/home_normal.png"
+              src="/Portfolio/assets/image/project/planwith/home_normal.png"
               alt="project_image"
             />
           </ProjectImage>
@@ -127,8 +127,8 @@ const Project = () => {
                 </a>
               </div>
 
-              <div className="github disa">
-                <a href="https://github.com/jyh08024">
+              <div className="github">
+                <a href="https://github.com/playerdecuple/postpone_twice">
                   <FaGithub />
                   <p>Github</p>
                 </a>

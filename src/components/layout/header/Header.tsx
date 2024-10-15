@@ -33,7 +33,7 @@ const Header = ({
       <LogoItem>
         <LogoBackground />
         <UserImage>
-          <img src="/assets/image/profile2.png" alt="profileImage" />
+          <img src="/Portfolio/assets/image/profile2.png" alt="profileImage" />
         </UserImage>
         <UserItem>
           <h3>개발자 장영훈</h3>
@@ -95,7 +95,7 @@ const Header = ({
               rel="noreferrer"
             >
               <span>Resume</span>
-              {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
+              {/* <img src="/Portfolio/assets/icon/programmers.png" alt="programmers" /> */}
               <IoDocumentTextSharp />
             </a>
           </IconList>

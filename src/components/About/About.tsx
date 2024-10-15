@@ -73,7 +73,7 @@ const AboutMe = () => {
           <p className="not_padding">&#125;</p>
         </div>
         <div className="profile_image">
-          <img src="/assets/image/profile.png" alt="profile" />
+          <img src="/Portfolio/assets/image/profile.png" alt="profile" />
         </div>
       </AboutContent>
     </AboutStyle>
