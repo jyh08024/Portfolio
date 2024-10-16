@@ -82,14 +82,6 @@ const Header = ({
               <MdEmail />
             </a>
             <a
-              href="https://velog.io/@jyh08024/posts"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Blog</span>
-              <SiVelog />
-            </a>
-            <a
               href="https://career.programmers.co.kr/pr/jyh08024_jyh"
               target="_blank"
               rel="noreferrer"
