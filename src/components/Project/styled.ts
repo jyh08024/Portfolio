@@ -68,7 +68,6 @@ export const ProjectInfo = styled.div`
 
   .project_type {
     margin-top: 4px;
-    font-weight: 3;
     color: #232fa9;
   }
 

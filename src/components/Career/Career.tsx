@@ -33,6 +33,69 @@ const Career = () => {
 
           <div className="resultItem">
             <div>
+              <p className="result">RTU 관리 플랫폼 개발</p>
+            </div>
+            <div>
+              <p className="period">2025.01 ~ present</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                자사에서 개발, 판매하는 RTU의 상태관리, 설비연동, 서버연동
+                기능을 탑재한 웹 프로그램 개발을 진행중입니다.
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">
+                React, Vite, recoil 기반의 프로젝트의 초기 세팅부터 CI/CD까지
+                담당하였습니다.
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">Highcharts 기반의 차트 페이지</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                React-flow 기반의 노드 기반 그래프 생성, 조작 페이지 개발
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">
+                Github Actions를 기반으로 최소한의 과정으로 빌드, 배포가
+                가능하도록 세팅
+              </p>
+            </div>
+          </div>
+
+          <div className="resultItem">
+            <div>
+              <p className="result">
+                <a href="https://vppinfo.komipo.co.kr/" target="_blank">
+                  한국중부발전 전력중계플랫폼 개발
+                </a>
+              </p>
+            </div>
+            <div>
+              <p className="period">2023.04 ~ present(유지보수)</p>
+            </div>
+            <div>
+              <p className="result_ex">
+                한국중부발전에서 운영중인 재생에너지관리플랫폼 중 하나인
+                전력중계플랫폼의 개발에 투입되었습니다.
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">
+                발전기 관리 페이지의 개발, 발전기 대시보드 개발 지원을
+                담당하였습니다.
+              </p>
+            </div>
+            <div>
+              <p className="result_ex">정산, 세금계산서 관련 기능 담당</p>
+            </div>
+          </div>
+
+          <div className="resultItem">
+            <div>
               <p className="result">
                 <a href="https://vppinfo.komipo.co.kr/" target="_blank">
                   한국중부발전 전력중계플랫폼 개발

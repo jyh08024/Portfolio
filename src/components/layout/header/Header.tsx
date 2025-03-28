@@ -33,7 +33,7 @@ const Header = ({
       <LogoItem>
         <LogoBackground />
         <UserImage>
-          <img src="assets/image/profile2.png" alt="profileImage" />
+          <img src="/assets/image/profile2.png" alt="profileImage" />
         </UserImage>
         <UserItem>
           <h3>개발자 장영훈</h3>
@@ -82,20 +82,12 @@ const Header = ({
               <MdEmail />
             </a>
             <a
-              href="https://velog.io/@jyh08024/posts"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Blog</span>
-              <SiVelog />
-            </a>
-            <a
               href="https://career.programmers.co.kr/pr/jyh08024_jyh"
               target="_blank"
               rel="noreferrer"
             >
               <span>Resume</span>
-              {/* <img src="assets/icon/programmers.png" alt="programmers" /> */}
+              {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
               <IoDocumentTextSharp />
             </a>
           </IconList>

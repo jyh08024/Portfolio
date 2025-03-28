@@ -22,7 +22,7 @@ const Project = () => {
           <ProjectInfo>
             <div>
               <p>2024.09 ~ 2024.10</p>
-              <h2 className="project_title">개인 포트로리오</h2>
+              <h2 className="project_title">개인 포트폴리오</h2>
               <p className="project_type">개인 프로젝트</p>
               <div className="project_explain">
                 <p>개인 포트폴리오 사이트로 사용하기 위해 개발한 프로젝트</p>
@@ -124,8 +124,8 @@ const Project = () => {
                 </a>
               </div>
 
-              <div className="github disa">
-                <a href="https://github.com/jyh08024">
+              <div className="github">
+                <a href="https://github.com/playerdecuple/postpone_twice">
                   <FaGithub />
                   <p>Github</p>
                 </a>
