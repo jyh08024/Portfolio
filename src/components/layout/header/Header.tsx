@@ -33,7 +33,7 @@ const Header = ({
       <LogoItem>
         <LogoBackground />
         <UserImage>
-          <img src="/assets/image/profile2.png" alt="profileImage" />
+          <img src="assets/image/profile2.png" alt="profileImage" />
         </UserImage>
         <UserItem>
           <h3>개발자 장영훈</h3>
