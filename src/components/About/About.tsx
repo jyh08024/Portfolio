@@ -19,16 +19,6 @@ const AboutMe = () => {
           <p className="transparent">-</p>
 
           <p>
-            고등학교 시절 웹 개발 기능반에 소속되었던 것을 계기로 프로그래밍에
-            발을 들였습니다.
-          </p>
-          <p>
-            현재는 React, TypeScript와 같은 웹 프론트엔드 언어를 주로 사용중이며
-          </p>
-          <p>Dart-Flutter를 사용한 앱 개발 분야에 관심을 가지고 있습니다.</p>
-
-          <p className="transparent">-</p>
-          <p>
             <span className="annotation">// 인적사항</span>
           </p>
           <p>
@@ -58,13 +48,21 @@ const AboutMe = () => {
             <span className="purpleRed">=</span>{" "}
             <span className="green">"안산공업고등학교 컴퓨터과 (졸업)"</span>
           </p>
+          <p>
+            <span className="blue">const</span> 병역{" "}
+            <span className="purpleRed">=</span>{" "}
+            <span className="green">
+              "현역 산업기능요원 복무 중(2028년 11월 복무만료)"
+            </span>
+          </p>
 
           <p className="transparent">-</p>
           <p>
             <span className="blue">return</span>{" "}
             <a
-              href="https://career.programmers.co.kr/pr/jyh08024_jyh"
+              href="/Portfolio/assets/file/resume.pdf"
               target="_blank"
+              rel="noreferrer"
             >
               장영훈_이력서
             </a>

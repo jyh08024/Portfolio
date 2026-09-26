@@ -20,13 +20,12 @@ const Skills = () => {
           <div className="main">React</div>
           <div className="main">TypeScript</div>
           <div className="main">jQuery</div>
-          <div className="main">Dart-Flutter</div>
           <div className="not_main">HTML, CSS</div>
           <div className="not_main">LESS</div>
         </div>
         <div className="skill_item">
+          <div className="not_main">Dart-Flutter</div>
           <div className="not_main">Redux</div>
-          <div className="not_main">styled-components</div>
         </div>
 
         <div></div>
@@ -40,6 +39,8 @@ const Skills = () => {
           <div className="not_main">PHP</div>
           <div className="not_main">Node.js</div>
           <div className="not_main">Nest.js</div>
+          <div className="not_main">JAVA</div>
+          <div className="not_main">SPRING</div>
         </div>
 
         {/*<div></div>

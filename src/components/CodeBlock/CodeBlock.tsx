@@ -15,6 +15,7 @@ import { IoMdClose } from "react-icons/io";
 import { WelcomeComponents } from "../welcome/Welcome";
 
 import AboutMe from "../About/About";
+import Introduce from "../Introduce/Introduce";
 import Skills from "../Skills/Skills";
 import Career from "../Career/Career";
 import Project from "../Project/Project";
@@ -37,6 +38,7 @@ interface FileIcon {
 const fileIcon: FileIcon = {
   WELCOME: <MdNotes />,
   "ABOUT ME": <FaReact color="#61dbfb" />,
+  INTRODUCE: <MdNotes />,
   SKILLS: <VscJson color="#febf00" />,
   PROJECT: <VscJson color="#febf00" />,
   ACTIVITY: <MdNotes />,
@@ -54,6 +56,7 @@ interface CodeLines {
 const extensionName: ExtensionName = {
   WELCOME: ".MD",
   "ABOUT ME": "ABOUT.ME",
+  INTRODUCE: ".MD",
   SKILLS: ".JSON",
   PROJECT: ".JSON",
   ACTIVITY: ".LOG",
@@ -78,6 +81,7 @@ const CodeBlock = ({
       />
     ),
     "ABOUT ME": <AboutMe />,
+    INTRODUCE: <Introduce />,
     SKILLS: <Skills />,
     PROJECT: <Project />,
     ACTIVITY: <Activity />,
@@ -86,7 +90,8 @@ const CodeBlock = ({
 
   const codeLines: CodeLines = {
     WELCOME: 0,
-    "ABOUT ME": 21,
+    "ABOUT ME": 16,
+    INTRODUCE: 16,
     SKILLS: 0,
     PROJECT: 22,
     ACTIVITY: 36,

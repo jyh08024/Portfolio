@@ -82,7 +82,7 @@ const Header = ({
               <MdEmail />
             </a>
             <a
-              href="https://career.programmers.co.kr/pr/jyh08024_jyh"
+              href="/Portfolio/assets/file/resume.pdf"
               target="_blank"
               rel="noreferrer"
             >

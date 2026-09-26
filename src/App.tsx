@@ -7,6 +7,7 @@ const copyrightName = '장영훈';
 
 const headerNavigationData: string[] = [
   'ABOUT ME',
+  'INTRODUCE',
   'SKILLS',
   'CAREER',
   'PROJECT',
