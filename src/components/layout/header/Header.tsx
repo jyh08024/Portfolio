@@ -33,7 +33,7 @@ const Header = ({
       <LogoItem>
         <LogoBackground />
         <UserImage>
-          <img src="assets/image/profile2.png" alt="profileImage" />
+          <img src={`${process.env.PUBLIC_URL}/assets/image/profile2.png`} alt="profileImage" />
         </UserImage>
         <UserItem>
           <h3>개발자 장영훈</h3>
@@ -82,12 +82,12 @@ const Header = ({
               <MdEmail />
             </a>
             <a
-              href="https://career.programmers.co.kr/pr/jyh08024_jyh"
+              href={`${process.env.PUBLIC_URL}/assets/file/resume.pdf`}
               target="_blank"
               rel="noreferrer"
             >
               <span>Resume</span>
-              {/* <img src="/assets/icon/programmers.png" alt="programmers" /> */}
+              {/* <img src={`${process.env.PUBLIC_URL}/assets/icon/programmers.png`} alt="programmers" /> */}
               <IoDocumentTextSharp />
             </a>
           </IconList>
