@@ -4,7 +4,7 @@ export const CareerStyle = styled.div`
   width: 100%;
   height: 100%;
 
-  > div {
+  > .career_header {
     height: 30px;
     margin: 4px 0;
   }

@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   CodeBluckStyle,
   Bluck,
@@ -7,96 +7,31 @@ import {
   FileItem,
   EditorContainer,
   EditorLines,
+  EditorContent,
 } from "./styled";
-import { FaReact, FaHtml5 } from "react-icons/fa";
-import { MdNotes } from "react-icons/md";
-import { VscJson } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
-import { WelcomeComponents } from "../welcome/Welcome";
-
-import AboutMe from "../About/About";
-import Introduce from "../Introduce/Introduce";
-import Skills from "../Skills/Skills";
-import Career from "../Career/Career";
-import Project from "../Project/Project";
-import Activity from "../Activity/Activity";
+import { enabledTabs } from "../../config/tabs";
+import useLineCount from "../../hooks/useLineCount";
 
 interface CodeBlcokProps {
   openTabList: string[];
   nowTab: string;
-  titleAnimation: boolean;
-  titleAnimationData: string[];
-  normalTitle: string;
   setNowTab: any;
   setOpenTab: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-interface FileIcon {
-  [key: string]: ReactElement;
-}
-
-const fileIcon: FileIcon = {
-  WELCOME: <MdNotes />,
-  "ABOUT ME": <FaReact color="#61dbfb" />,
-  INTRODUCE: <MdNotes />,
-  SKILLS: <VscJson color="#febf00" />,
-  PROJECT: <VscJson color="#febf00" />,
-  ACTIVITY: <MdNotes />,
-  CAREER: <FaHtml5 color="#ff5100" />,
-};
-
-interface ExtensionName {
-  [key: string]: String;
-}
-
-interface CodeLines {
-  [key: string]: number;
-}
-
-const extensionName: ExtensionName = {
-  WELCOME: ".MD",
-  "ABOUT ME": "ABOUT.ME",
-  INTRODUCE: ".MD",
-  SKILLS: ".JSON",
-  PROJECT: ".JSON",
-  ACTIVITY: ".LOG",
-  CAREER: ".HTML",
-};
-
 const CodeBlock = ({
   openTabList,
   nowTab,
-  titleAnimation,
-  titleAnimationData,
-  normalTitle,
   setNowTab,
   setOpenTab,
 }: CodeBlcokProps) => {
-  const tabComponents: any = {
-    WELCOME: (
-      <WelcomeComponents
-        titleAnimation={titleAnimation}
-        titleAnimationData={titleAnimationData}
-        normalTitle={normalTitle}
-      />
-    ),
-    "ABOUT ME": <AboutMe />,
-    INTRODUCE: <Introduce />,
-    SKILLS: <Skills />,
-    PROJECT: <Project />,
-    ACTIVITY: <Activity />,
-    CAREER: <Career />,
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const linesRef = useRef<HTMLDivElement>(null);
 
-  const codeLines: CodeLines = {
-    WELCOME: 0,
-    "ABOUT ME": 16,
-    INTRODUCE: 16,
-    SKILLS: 0,
-    PROJECT: 22,
-    ACTIVITY: 36,
-    CAREER: 54,
-  };
+  const currentTab = enabledTabs.find((tab) => tab.name === nowTab);
+  const lineCount = useLineCount(containerRef, contentRef, linesRef, [nowTab]);
 
   return (
     <CodeBluckStyle>
@@ -109,50 +44,55 @@ const CodeBlock = ({
 
         <FileBar>
           <div className="file_list">
-            {openTabList.map((tabName: string) => (
-              <FileItem
-                key={tabName}
-                data-nowTab={tabName === nowTab}
-                onClick={() => {
-                  setNowTab(tabName);
-                }}
-              >
-                {fileIcon[tabName]}
-                <p>
-                  {tabName == "ABOUT ME"
-                    ? extensionName?.[tabName]
-                    : tabName + extensionName?.[tabName]}
-                </p>
-                {/*{nowTab == tabName && tabName !== "WELCOME" && (
-                  <div
-				  	onClick={() => {
-                      const deletedArr = openTabList?.filter(
-                        (tab: string) => tab !== tabName
-                      );
-                      setNowTab(deletedArr?.[0] || "");
-                      setOpenTab(deletedArr);
-                    }}
-                  >
-                    <IoMdClose />
-                  </div>
-                )}*/}
-              </FileItem>
-            ))}
+            {openTabList.map((tabName: string) => {
+              const tab = enabledTabs.find((item) => item.name === tabName);
+
+              return (
+                <FileItem
+                  key={tabName}
+                  data-nowTab={tabName === nowTab}
+                  onClick={() => {
+                    setNowTab(tabName);
+                  }}
+                >
+                  {tab?.icon}
+                  <p>{tab?.fileName ?? tabName}</p>
+                  {/*{nowTab == tabName && tabName !== "WELCOME" && (
+                    <div
+                      onClick={() => {
+                        const deletedArr = openTabList?.filter(
+                          (tab: string) => tab !== tabName
+                        );
+                        setNowTab(deletedArr?.[0] || "");
+                        setOpenTab(deletedArr);
+                      }}
+                    >
+                      <IoMdClose />
+                    </div>
+                  )}*/}
+                </FileItem>
+              );
+            })}
           </div>
         </FileBar>
 
-        <EditorContainer>
-          {!["WELCOME", "PROJECT"].includes(nowTab) && (
-            <EditorLines>
-              {new Array(codeLines?.[nowTab] || 22)
-                .fill("")
-                .map((_: string, index: number) => (
-                  <div className="line_item">{index + 1}</div>
+        <EditorContainer ref={containerRef}>
+          {currentTab?.showLineNumbers ? (
+            <>
+              <EditorLines ref={linesRef}>
+                {Array.from({ length: lineCount }, (_, index) => (
+                  <div className="line_item" key={index}>
+                    {index + 1}
+                  </div>
                 ))}
-            </EditorLines>
+              </EditorLines>
+              <EditorContent ref={contentRef}>
+                {currentTab.component}
+              </EditorContent>
+            </>
+          ) : (
+            currentTab?.component
           )}
-
-          {tabComponents?.[nowTab]}
         </EditorContainer>
       </Bluck>
     </CodeBluckStyle>

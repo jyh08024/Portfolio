@@ -107,3 +107,10 @@ export const EditorLines = styled.div`
     margin: 0.4rem 0;
   }
 `;
+
+// 줄번호 계산을 위해 콘텐츠 높이를 그대로 측정할 수 있도록 감싸는 영역
+export const EditorContent = styled.div`
+  flex: 1;
+  min-width: 0;
+  align-self: flex-start;
+`;

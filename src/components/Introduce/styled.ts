@@ -12,7 +12,7 @@ export const IntroduceContent = styled.div`
     color: #f4f5fc;
     margin: 0.4rem 0;
     font-size: 1.6rem;
-    line-height: 1.5;
+    line-height: 1.2;
 
     &.heading {
       color: #febf00;

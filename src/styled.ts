@@ -18,71 +18,71 @@ export const GlobalStyled = createGlobalStyle`
 
   @font-face {
     font-family: "BlackHanSans";
-    src: url('/Portfolio/assets/fonts/BlackHanSans-Regular.ttf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/BlackHanSans-Regular.ttf');
   }
 
 	@font-face {
     font-family: "Pretendard";
     font-weight: 100;
-    src: url('/Portfolio/assets/fonts/Pretendard-Thin.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Thin.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 200;
-    src: url('/Portfolio/assets/fonts/Pretendard-ExtraLight.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-ExtraLight.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 300;
-    src: url('/Portfolio/assets/fonts/Pretendard-Light.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Light.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 400;
-    src: url('/Portfolio/assets/fonts/Pretendard-Regular.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Regular.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 500;
-    src: url('/Portfolio/assets/fonts/Pretendard-Medium.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Medium.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 600;
-    src: url('/Portfolio/assets/fonts/Pretendard-SemiBold.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-SemiBold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 700;
-    src: url('/Portfolio/assets/fonts/Pretendard-Bold.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Bold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 800;
-    src: url('/Portfolio/assets/fonts/Pretendard-ExtraBold.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-ExtraBold.otf');
   }
 
   @font-face {
     font-family: "Pretendard";
     font-weight: 900;
-    src: url('/Portfolio/assets/fonts/Pretendard-Black.otf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Pretendard-Black.otf');
   }
 
   @font-face {
     font-family: "Menlo";
-    src: url('/Portfolio/assets/fonts/Menlo-Regular.ttf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Menlo-Regular.ttf');
   }
 
   /* @font-face {
     font-family: "Monaco";
-    src: url('/Portfolio/assets/fonts/Monaco-Linux.ttf');
+    src: url('${process.env.PUBLIC_URL}/assets/fonts/Monaco-Linux.ttf');
   } */
 
   //웹 기본 스타일 초기화

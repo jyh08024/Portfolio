@@ -60,7 +60,7 @@ const AboutMe = () => {
           <p>
             <span className="blue">return</span>{" "}
             <a
-              href="/Portfolio/assets/file/resume.pdf"
+              href={`${process.env.PUBLIC_URL}/assets/file/resume.pdf`}
               target="_blank"
               rel="noreferrer"
             >
@@ -71,7 +71,7 @@ const AboutMe = () => {
           <p className="not_padding">&#125;</p>
         </div>
         <div className="profile_image">
-          <img src="/Portfolio/assets/image/profile.png" alt="profile" />
+          <img src={`${process.env.PUBLIC_URL}/assets/image/profile.png`} alt="profile" />
         </div>
       </AboutContent>
     </AboutStyle>

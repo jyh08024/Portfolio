@@ -18,7 +18,7 @@ const Project = () => {
         <ProjectItem>
           <ProjectImage>
             <img
-              src="/Portfolio/assets/image/project/portfolio.png"
+              src={`${process.env.PUBLIC_URL}/assets/image/project/portfolio.png`}
               alt="project_image"
             />
           </ProjectImage>
@@ -69,7 +69,7 @@ const Project = () => {
         <ProjectItem>
           <ProjectImage>
             <img
-              src="/Portfolio/assets/image/project/planwith/home_normal.png"
+              src={`${process.env.PUBLIC_URL}/assets/image/project/planwith/home_normal.png`}
               alt="project_image"
             />
           </ProjectImage>
