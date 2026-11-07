@@ -27,6 +27,7 @@ export const welcomeConfig = {
 
 export interface TabConfig {
   name: string; // 탭 식별자 (사이드 메뉴 표시명)
+  path: string; // 탭 주소 (예: "career" → /career, 빈 문자열은 루트)
   fileName: string; // 상단 파일 탭에 표시되는 이름
   icon: ReactElement;
   component: ReactElement;
@@ -39,6 +40,7 @@ export interface TabConfig {
 export const tabs: TabConfig[] = [
   {
     name: "WELCOME",
+    path: "",
     fileName: "WELCOME.MD",
     icon: <MdNotes />,
     component: <WelcomeComponents {...welcomeConfig} />,
@@ -48,6 +50,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "ABOUT ME",
+    path: "about",
     fileName: "ABOUT.ME",
     icon: <FaReact color="#61dbfb" />,
     component: <AboutMe />,
@@ -57,6 +60,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "INTRODUCE",
+    path: "introduce",
     fileName: "INTRODUCE.MD",
     icon: <MdNotes />,
     component: <Introduce />,
@@ -66,6 +70,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "SKILLS",
+    path: "skills",
     fileName: "SKILLS.JSON",
     icon: <VscJson color="#febf00" />,
     component: <Skills />,
@@ -75,6 +80,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "CAREER",
+    path: "career",
     fileName: "CAREER.HTML",
     icon: <FaHtml5 color="#ff5100" />,
     component: <Career />,
@@ -84,6 +90,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "PROJECT",
+    path: "project",
     fileName: "PROJECT.JSON",
     icon: <VscJson color="#febf00" />,
     component: <Project />,
@@ -93,6 +100,7 @@ export const tabs: TabConfig[] = [
   },
   {
     name: "ACTIVITY",
+    path: "activity",
     fileName: "ACTIVITY.LOG",
     icon: <MdNotes />,
     component: <Activity />,
@@ -109,3 +117,11 @@ export const navigationTabs = enabledTabs
   .map((tab) => tab.name);
 
 export const defaultTab = "WELCOME";
+
+export const findTabByPath = (path: string) =>
+  enabledTabs.find((tab) => tab.path === path);
+
+export const getTabPath = (name: string) => {
+  const tab = enabledTabs.find((item) => item.name === name);
+  return tab ? `/${tab.path}` : "/";
+};

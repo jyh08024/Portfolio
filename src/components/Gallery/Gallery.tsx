@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   GalleryCard,
   GalleryGlobalStyle,
@@ -71,9 +72,9 @@ const Gallery = ({ projectId }: GalleryProps) => {
         <GalleryGlobalStyle />
         <GalleryStyle>
           <GalleryHeader>
-            <a className="back" href={`${process.env.PUBLIC_URL}/`}>
+            <Link className="back" to="/">
               ← 포트폴리오로 돌아가기
-            </a>
+            </Link>
             <h1>갤러리를 찾을 수 없습니다.</h1>
           </GalleryHeader>
         </GalleryStyle>
@@ -87,9 +88,9 @@ const Gallery = ({ projectId }: GalleryProps) => {
 
       <GalleryStyle className={typeClass}>
         <GalleryHeader>
-          <a className="back" href={`${process.env.PUBLIC_URL}/`}>
+          <Link className="back" to="/">
             ← 포트폴리오로 돌아가기
-          </a>
+          </Link>
           <p className="period">{project.period}</p>
           <h1>{project.title}</h1>
           <p className="desc">{project.descriptions.join(" ")}</p>

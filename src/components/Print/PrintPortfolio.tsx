@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { PrintGlobalStyle, Sheet, Toolbar } from "./styled";
 import PrintImage from "./PrintImage";
 import { profile } from "../../data/profile";
@@ -8,7 +9,7 @@ import { activities } from "../../data/activity";
 
 // 인쇄물에는 로컬 주소 대신 항상 배포된 사이트 주소를 표시
 const getGalleryUrl = (projectId: string) =>
-  `${profile.siteUrl}?gallery=${projectId}`;
+  `${profile.siteUrl}gallery/${projectId}`;
 
 // 웹 화면용으로 줄 단위로 나눠 둔 문장을 인쇄용으로 이어 붙임
 const joinLines = (lines: string[] = []) => lines.join(" ");
@@ -31,7 +32,7 @@ const PrintPortfolio = () => {
         <button type="button" onClick={() => window.print()}>
           인쇄 / PDF로 저장
         </button>
-        <a href={`${process.env.PUBLIC_URL}/`}>사이트로 돌아가기</a>
+        <Link to="/">사이트로 돌아가기</Link>
         <p>인쇄 설정에서 "배경 그래픽"을 켜면 강조 색상까지 함께 저장됩니다.</p>
       </Toolbar>
 

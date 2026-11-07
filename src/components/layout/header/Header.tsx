@@ -18,7 +18,7 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 type propTypes = {
   navigationData: string[];
   userName: string;
-  setNowTab: React.Dispatch<React.SetStateAction<string>>;
+  setNowTab: (tab: string) => void;
   setOpenTab: React.Dispatch<React.SetStateAction<string[]>>;
 };
 

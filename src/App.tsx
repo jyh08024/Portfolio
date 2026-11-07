@@ -1,14 +1,24 @@
 import React, { useCallback, useState } from 'react';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import './App.css';
 import Header from './components/layout/header/Header';
 import CodeBlock from './components/CodeBlock/CodeBlock';
-import { copyrightName, defaultTab, enabledTabs, navigationTabs } from './config/tabs';
+import { copyrightName, enabledTabs, findTabByPath, getTabPath, navigationTabs } from './config/tabs';
 
 const App = () => {
-  const [openTabList, setOpenTab] = useState<string[]>(enabledTabs.map((tab) => tab.name));
-  const [nowTab, setNowTab] = useState<string>(defaultTab);
+  // 현재 탭은 주소(/career 등)로 결정됨. 루트(/)는 WELCOME 탭
+  const { tab: tabPath = '' } = useParams();
+  const navigate = useNavigate();
+  const currentTab = findTabByPath(tabPath);
 
-  const handleSetNowTab = useCallback((newTab: string) => setNowTab(newTab), []);
+  const [openTabList, setOpenTab] = useState<string[]>(enabledTabs.map((tab) => tab.name));
+
+  const handleSetNowTab = useCallback((newTab: string) => navigate(getTabPath(newTab)), [navigate]);
+
+  // 없는 탭이나 비활성화된 탭 주소로 들어오면 루트로 이동
+  if (!currentTab) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>
@@ -16,12 +26,12 @@ const App = () => {
         <Header
           navigationData={navigationTabs}
           userName={copyrightName}
-          setNowTab={setNowTab}
+          setNowTab={handleSetNowTab}
           setOpenTab={setOpenTab}
         />
         <CodeBlock
           openTabList={openTabList}
-          nowTab={nowTab}
+          nowTab={currentTab.name}
           setNowTab={handleSetNowTab}
           setOpenTab={setOpenTab}
         />

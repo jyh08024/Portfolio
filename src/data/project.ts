@@ -11,7 +11,7 @@ export interface GalleryImage {
 }
 
 export interface ProjectData {
-  id: string; // 갤러리 페이지 주소(?gallery=id)에 사용
+  id: string; // 갤러리 페이지 주소(/gallery/id)에 사용
   title: string;
   period: string;
   type: string;
@@ -31,7 +31,7 @@ export const toAssetUrl = (path: string) =>
   encodeURI(`${process.env.PUBLIC_URL}/${path}`);
 
 export const getGalleryPath = (project: ProjectData) =>
-  `${process.env.PUBLIC_URL}/?gallery=${project.id}`;
+  `${process.env.PUBLIC_URL}/gallery/${project.id}`;
 
 // "프로젝트 바로가기" 버튼이 연결될 주소
 export const getProjectLink = (project: ProjectData) =>
