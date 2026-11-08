@@ -135,20 +135,6 @@ const encoredProjects: CareerProject[] = [
   },
 ];
 
-const freelanceProjects: CareerProject[] = [
-  {
-    title: "L사 사내 웹서비스 개발",
-    tasks: [
-      "사이트 내 애니메이션의 전반을 담당 (로딩, 스크롤, 비주얼, 요소의 인터렉션 등)",
-      "메인 랜딩 페이지 개발",
-      "프로모션 관련 서브 페이지 개발(3개 이상)",
-      "일부 API 연동 작업 진행",
-      "운영 서버에 배포 작업 진행",
-    ],
-    stacks: ["HTML, CSS, JavaScript, PHP, CodeIgniter, Git"],
-  },
-];
-
 export interface CareerCompany {
   name: string;
   link?: string;
@@ -167,13 +153,5 @@ export const careers: CareerCompany[] = [
     description:
       "신재생에너지 도메인에서 2023년부터 화면개발을 해왔고 2026년부터 백엔드 개발 또한 병행중입니다.",
     projects: encoredProjects,
-  },
-  {
-    name: "L사 사내 웹서비스 개발 업무",
-    period: "2022.11 ~ 2023.01",
-    position: "프리랜서",
-    description:
-      "대기업 L사 사내 웹서비스 개발 외주 업무로, 재직 초기에 병행하였습니다.",
-    projects: freelanceProjects,
   },
 ];

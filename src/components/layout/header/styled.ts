@@ -119,6 +119,6 @@ export const IconList = styled.div`
 export const FooterStyle = styled.div`
   p {
     margin: 0.2rem 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 `;
