@@ -1,82 +1,75 @@
 import styled from "styled-components";
 
+// 에디터 줄번호(1.6rem 글자 + 0.4rem 여백)와 줄 간격을 맞춘 JSON 문서 스타일
 export const SkillsStyle = styled.div`
   width: 100%;
-
-  .title {
-    font-size: 1.6rem;
-    margin: 0.4rem 0;
-    color: #febf00;
-  }
-`;
-
-export const SkillsList = styled.div`
-  width: 100%;
-
-  div {
-    margin: 0.4rem 0;
-    height: 30px;
-  }
+  padding-right: 2rem;
 
   p {
-    color: #f4f5fc;
+    margin: 0.4rem 0 0.4rem 2rem;
     font-size: 1.6rem;
-    display: flex;
-    align-items: center;
+    color: #f4f5fc;
 
-    &.yellow {
-      color: #febf00;
-      padding-left: 0;
+    &.not_padding {
+      margin-left: 0;
     }
 
-    span {
-      &.key {
-        color: #febf00;
-      }
-    }
-
-    img {
-      height: 30px;
-      margin-right: 12px;
-    }
-
-    &.explain_text {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    &.dataKey {
-      color: #febf00;
+    &.transparent {
+      opacity: 0;
     }
   }
 
-  .skill_item {
+  .bracket {
+    color: #febf00;
+  }
+
+  .key {
+    color: skyblue;
+  }
+
+  .punct {
+    color: #f4f5fc;
+  }
+
+  .annotation {
+    opacity: 0.5;
+  }
+
+  .group + .group {
+    margin-top: 0.8rem;
+  }
+
+  .chips {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0.6rem 0 0.6rem 4rem;
+  }
+
+  .chip {
+    display: inline-flex;
     align-items: center;
-    column-gap: 8px;
-    height: auto;
-    margin: 0;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: transform 0.15s ease;
 
-    > div {
-      display: flex;
-      align-items: center;
-      padding: 8px 24px;
-      font-weight: bold;
-      height: auto;
-      border-radius: 99999px;
-      cursor: pointer;
-
-      &.main {
-        background: #febf00;
-        color: #333;
-      }
-
-      &.not_main {
-        background: #333;
-        border: 2px solid #febf00;
-        color: #f4f5fc;
-      }
+    &.main {
+      background: #febf00;
+      border: 1.5px solid #febf00;
+      color: #333;
     }
+
+    &.used {
+      background: transparent;
+      border: 1.5px solid #febf0099;
+      color: #f4f5fc;
+    }
+  }
+
+  .chips .chip:hover {
+    transform: translateY(-2px);
   }
 `;

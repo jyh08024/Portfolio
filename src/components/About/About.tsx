@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { AboutStyle, AboutContent } from "./styled";
-import { SkillsStyle, SkillsList } from "../Skills/styled";
 
 const AboutMe = () => {
   return (
