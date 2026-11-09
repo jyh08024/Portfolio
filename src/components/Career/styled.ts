@@ -57,6 +57,12 @@ export const CareerItem = styled.div`
     display: block;
     margin-left: 24px;
 
+    /* 긴 문장이 줄바꿈되어도 다음 줄과 겹치지 않도록 높이를 내용에 맞춤 */
+    div {
+      height: auto;
+      min-height: 30px;
+    }
+
     .period {
       font-size: 1rem;
       padding-left: 1.2rem;
@@ -80,6 +86,13 @@ export const CareerItem = styled.div`
       a {
         text-decoration: underline;
       }
+    }
+
+    .result_sub {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding-left: 1.2rem;
+      color: #febf00;
     }
 
     .result_ex {

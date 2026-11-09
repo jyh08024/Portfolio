@@ -32,6 +32,18 @@ const renderProjects = (projects: CareerProject[]) =>
             <p className="result_ex">- {task}</p>
           </div>
         ))}
+        {project.sections?.map((section) => (
+          <Fragment key={section.title}>
+            <div>
+              <p className="result_sub">{section.title}</p>
+            </div>
+            {section.items.map((item) => (
+              <div key={item}>
+                <p className="result_ex">- {item}</p>
+              </div>
+            ))}
+          </Fragment>
+        ))}
         {project.stacks?.map((stack) => (
           <div key={stack}>
             <p className="result_ex">기술스택: {stack}</p>

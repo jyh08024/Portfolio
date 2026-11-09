@@ -206,13 +206,14 @@ export const Sheet = styled.main`
     margin-top: 16px;
     padding-left: 12px;
     border-left: 3px solid #febf00;
-    break-inside: avoid;
 
+    /* 프로젝트 전체 대신 소제목 묶음 단위로 페이지가 나뉘게 함 (긴 프로젝트 앞의 큰 공백 방지) */
     .career_project_head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 12px;
+      break-after: avoid;
 
       h4 {
         font-size: 14px;
@@ -228,6 +229,20 @@ export const Sheet = styled.main`
       margin-top: 4px;
       color: #444;
       line-height: 1.6;
+    }
+
+    .career_section {
+      margin-top: 8px;
+      break-inside: avoid;
+
+      h5 {
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .bullet {
+        margin-top: 2px;
+      }
     }
 
     .stack {

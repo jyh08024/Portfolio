@@ -96,6 +96,16 @@ const PrintPortfolio = () => {
                       ))}
                     </ul>
                   )}
+                  {project.sections?.map((section) => (
+                    <div className="career_section" key={section.title}>
+                      <h5>{section.title}</h5>
+                      <ul className="bullet">
+                        {section.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                   {project.stacks?.map((stack) => (
                     <p className="stack" key={stack}>
                       기술스택: {stack}
