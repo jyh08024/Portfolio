@@ -15,13 +15,12 @@ export const ActivityContainer = styled.div`
 export const ActivityList = styled.div`
   width: 48%;
   padding: 20px 0;
-  /* background: #f4f5fc; */
   border-radius: 8px;
   margin-top: 18px;
 
   .act_title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
     color: #fff;
   }
 
@@ -30,15 +29,27 @@ export const ActivityList = styled.div`
   }
 `;
 
+// 글자 크기 단계는 CAREER 탭과 동일: 항목 제목 1.2rem > 설명 1.1rem > 날짜 1rem
 export const ActivityItem = styled.div`
   width: 100%;
+
   .act_item {
     width: 100%;
     padding-left: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 2.4rem;
     position: relative;
     border-left: 2px solid #febf00;
     color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+
+    * {
+      word-break: inherit;
+    }
+
+    &:last-child {
+      padding-bottom: 0.4rem;
+    }
 
     &::after {
       content: "";
@@ -52,10 +63,18 @@ export const ActivityItem = styled.div`
       border: 2px solid #febf00;
     }
 
+    .act_date {
+      font-size: 1rem;
+      line-height: 1;
+      color: #f4f5fc90;
+    }
+
     .act_name {
-      margin-bottom: 10px;
+      margin-top: 0.6rem;
+
       b {
-        font-size: 20px;
+        font-size: 1.2rem;
+        line-height: 1.5;
 
         a {
           text-decoration: underline;
@@ -64,11 +83,10 @@ export const ActivityItem = styled.div`
     }
 
     .act_explain {
-      font-size: 18px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 10px;
-      opacity: 0.7;
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      opacity: 0.75;
     }
   }
 `;
