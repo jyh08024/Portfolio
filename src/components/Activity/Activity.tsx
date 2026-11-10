@@ -23,23 +23,21 @@ const Activity = () => {
             <ActivityItem>
               {category.items.map((item) => (
                 <div className="act_item" key={item.title}>
+                  <p className="act_date">{item.date}</p>
                   <div className="act_name">
                     <b>
                       {item.link ? (
                         <a href={item.link} target="_blank" rel="noreferrer">
-                          {item.title} ({item.date})
+                          {item.title}
                         </a>
                       ) : (
-                        `${item.title} (${item.date})`
+                        item.title
                       )}
                     </b>
                   </div>
 
-                  {item.descriptions.map((description) => (
-                    <div className="act_explain" key={description}>
-                      <p>{description}</p>
-                    </div>
-                  ))}
+                  {/* 데이터는 줄 단위로 나뉘어 있어 한 문단으로 이어서 표시 */}
+                  <p className="act_explain">{item.descriptions.join(" ")}</p>
                 </div>
               ))}
             </ActivityItem>

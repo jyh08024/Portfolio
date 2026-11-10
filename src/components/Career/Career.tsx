@@ -34,6 +34,8 @@ const renderProjects = (projects: CareerProject[]) =>
         ))}
         {project.sections?.map((section) => (
           <Fragment key={section.title}>
+            {/* 성과 단락 사이 빈 줄 */}
+            <div></div>
             <div>
               <p className="result_sub">{section.title}</p>
             </div>
@@ -44,6 +46,7 @@ const renderProjects = (projects: CareerProject[]) =>
             ))}
           </Fragment>
         ))}
+        {project.sections && project.stacks && <div></div>}
         {project.stacks?.map((stack) => (
           <div key={stack}>
             <p className="result_ex">기술스택: {stack}</p>

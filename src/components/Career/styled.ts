@@ -68,9 +68,10 @@ export const CareerItem = styled.div`
       padding-left: 1.2rem;
     }
 
+    /* 글자 크기 단계: 프로젝트 제목 > 소제목 > 본문 (기간은 별도) */
     .result {
-      font-weight: 600;
-      font-size: 1.2rem;
+      font-weight: 700;
+      font-size: 1.4rem;
       position: relative;
       padding-left: 1.2rem;
 
@@ -96,7 +97,7 @@ export const CareerItem = styled.div`
     }
 
     .result_ex {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       padding-left: 1.2rem;
       color: #ffffff;
       opacity: 0.75;
