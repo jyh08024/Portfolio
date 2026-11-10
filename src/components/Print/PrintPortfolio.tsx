@@ -10,6 +10,26 @@ import { activities } from "../../data/activity";
 const getGalleryUrl = (projectId: string) =>
   `${profile.siteUrl}?gallery=${projectId}`;
 
+// 표지의 목차: 각 섹션에 담긴 내용을 데이터에서 요약
+const coverContents = [
+  {
+    title: "CAREER",
+    description: careers
+      .map((career) => `${career.name} · 프로젝트 ${career.projects.length}건`)
+      .join(", "),
+  },
+  {
+    title: "PROJECT",
+    description: projects.map((project) => project.title).join(" · "),
+  },
+  {
+    title: "ACTIVITY",
+    description: activities
+      .map((category) => `${category.name} ${category.items.length}건`)
+      .join(" · "),
+  },
+];
+
 // 웹 화면용으로 줄 단위로 나눠 둔 문장을 인쇄용으로 이어 붙임
 const joinLines = (lines: string[] = []) => lines.join(" ");
 
@@ -36,15 +56,34 @@ const PrintPortfolio = () => {
       </Toolbar>
 
       <Sheet>
-        <header className="profile">
-          <h1>{profile.name}</h1>
-          <p className="role">{profile.role}</p>
-          <div className="summary">
-            {profile.summary.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
+        <section className="cover">
+          <div className="cover_top">
+            <span>PORTFOLIO</span>
+            <span>{new Date().getFullYear()}</span>
           </div>
-          <div className="contact">
+
+          <div className="cover_main">
+            <p className="cover_role">{profile.role}</p>
+            <h1>{profile.name}</h1>
+            <div className="cover_bar" />
+            <div className="cover_summary">
+              {profile.summary.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+
+          <ol className="cover_contents">
+            {coverContents.map((item, index) => (
+              <li key={item.title}>
+                <span className="no">{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item.title}</strong>
+                <span className="desc">{item.description}</span>
+              </li>
+            ))}
+          </ol>
+
+          <div className="cover_contact">
             <span>{profile.email}</span>
             <span>{profile.phone}</span>
             {profile.links.map((link) => (
@@ -53,7 +92,7 @@ const PrintPortfolio = () => {
               </a>
             ))}
           </div>
-        </header>
+        </section>
 
         <section className="section">
           <h2 className="section_title">CAREER</h2>

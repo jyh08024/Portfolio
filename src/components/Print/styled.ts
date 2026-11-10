@@ -92,35 +92,102 @@ export const Sheet = styled.main`
     color: inherit;
   }
 
-  /* 프로필 */
-  .profile {
-    padding-bottom: 20px;
-    border-bottom: 2px solid #222;
+  /* 표지: 인쇄 시 한 페이지를 통째로 차지 */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    min-height: 262mm;
+    break-after: page;
 
-    h1 {
-      font-size: 30px;
+    @media print {
+      /* A4 높이(297mm)에서 페이지 여백(위아래 14mm)을 뺀 영역보다 조금 작게 잡아 빈 페이지가 생기지 않게 함 */
+      min-height: 0;
+      height: 266mm;
+    }
+
+    .cover_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #222;
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 4px;
     }
 
-    .role {
-      margin-top: 4px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #232fa9;
+    .cover_main {
+      margin-top: 62mm;
+
+      .cover_role {
+        font-size: 18px;
+        font-weight: 600;
+        color: #232fa9;
+      }
+
+      h1 {
+        margin-top: 6px;
+        font-size: 64px;
+        font-weight: 800;
+        letter-spacing: 6px;
+        line-height: 1.2;
+      }
+
+      .cover_bar {
+        width: 72px;
+        height: 8px;
+        margin-top: 20px;
+        background: #febf00;
+      }
+
+      .cover_summary {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 1.9;
+        color: #444;
+      }
     }
 
-    .summary {
-      margin-top: 14px;
-      line-height: 1.7;
+    .cover_contents {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .no {
+        font-size: 22px;
+        font-weight: 800;
+        color: #febf00;
+      }
+
+      strong {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .desc {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #666;
+      }
     }
 
-    .contact {
+    .cover_contact {
       display: flex;
       flex-wrap: wrap;
       column-gap: 16px;
       row-gap: 4px;
-      margin-top: 14px;
+      margin-top: 20px;
+      padding-top: 12px;
+      border-top: 2px solid #222;
       font-size: 12px;
       color: #555;
     }
@@ -129,6 +196,10 @@ export const Sheet = styled.main`
   /* 섹션 */
   .section {
     margin-top: 28px;
+  }
+
+  .cover + .section {
+    margin-top: 0;
   }
 
   .section + .section.page_break {
